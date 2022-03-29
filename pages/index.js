@@ -30,18 +30,18 @@ export default function Home() {
           <p>How ecofriendly is your Website?</p>
         </StyledTextfield1>
         <StyledTextfield2>
-          <p> Was geschieht hier? </p>
+          <p> Type in your URL: </p>
         </StyledTextfield2>
         <StyledTextField21>
           <input></input>
         </StyledTextField21>
         <StyledTextField22>
-          <p>Estimates the carbon footprint of your website. </p>
+          <p> Nutzungshinweise / Verarbeitungshinweise </p>
         </StyledTextField22>
         <Area1></Area1>
         <Area2></Area2>
         <StyledTextfield3>
-          <p> was geht hier ab?</p>
+          <p> Estimates the carbonn footprint of your website.</p>
         </StyledTextfield3>
         <Area3></Area3>
         <Area4></Area4>
