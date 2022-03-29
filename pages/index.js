@@ -13,6 +13,7 @@ import {
   Area4,
   Area3,
 } from '../components/BackgroundGrid/BackgroundGrid';
+import { Fetchdata } from '../components/InputFieldUrl/InputUrl';
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
           <p>Type in your URL:</p>
         </StyledTextfield2>
         <StyledTextField21>
-          <input></input>
+          <Fetchdata></Fetchdata>
         </StyledTextField21>
         <StyledTextField22>
           <p>Nutzungshinweise / Verarbeitungshinweise</p>
