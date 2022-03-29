@@ -13,9 +13,21 @@ import {
   Area4,
   Area3,
 } from '../components/BackgroundGrid/BackgroundGrid';
-import { Fetchdata } from '../components/InputFieldUrl/InputUrl';
 
-export default function Home() {
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(
+    'https://api.websitecarbon.com/site?url=https%3A%2F%2Fwww.wholegraindigital.com'
+  );
+  const data = await res.json();
+  console.log(data);
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
+
+export default function Home({ data }) {
+  console.log(data);
   return (
     <>
       <Head>
@@ -31,11 +43,9 @@ export default function Home() {
           <p>How ecofriendly is your Website?</p>
         </StyledTextfield1>
         <StyledTextfield2>
-          <p>Type in your URL:</p>
+          <p>Type in your URL: {data.url} </p>
         </StyledTextfield2>
-        <StyledTextField21>
-          <Fetchdata></Fetchdata>
-        </StyledTextField21>
+        <StyledTextField21></StyledTextField21>
         <StyledTextField22>
           <p>Nutzungshinweise / Verarbeitungshinweise</p>
         </StyledTextField22>
