@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title> Carbon Footprint </title>
+        <title>Carbon Footprint</title>
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌏</text></svg>"
-        ></link>{' '}
+        ></link>
       </Head>
 
       <StyledBackgroundGrid>
@@ -30,18 +30,18 @@ export default function Home() {
           <p>How ecofriendly is your Website?</p>
         </StyledTextfield1>
         <StyledTextfield2>
-          <p> Type in your URL: </p>
+          <p>Type in your URL:</p>
         </StyledTextfield2>
         <StyledTextField21>
           <input></input>
         </StyledTextField21>
         <StyledTextField22>
-          <p> Nutzungshinweise / Verarbeitungshinweise </p>
+          <p>Nutzungshinweise / Verarbeitungshinweise</p>
         </StyledTextField22>
         <Area1></Area1>
         <Area2></Area2>
         <StyledTextfield3>
-          <p> Estimates the carbonn footprint of your website.</p>
+          <p>Estimates the carbonn footprint of your website.</p>
         </StyledTextfield3>
         <Area3></Area3>
         <Area4></Area4>
