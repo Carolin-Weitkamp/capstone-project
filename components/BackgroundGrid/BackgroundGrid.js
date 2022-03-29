@@ -23,29 +23,44 @@ const StyledBackgroundGrid = styled.div`
 const StyledTextfield1 = styled.div`
   grid-column: col-start / span 6;
   grid-row: 1 / 5;
-  border: 1px solid white;
-  text-align: left;
-  font-size: 5.4rem;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+  border-right: 0.35vw solid white;
+  text-align: bottom;
   font-weight: medium;
   > p {
-    font-weight: bold;
+    font-weight: medium;
     color: white;
     padding-left: 30px;
+    font-size: 8vw;
+    transition: 1s;
+    &:hover {
+      color: purple;
+    }
   }
 `;
 
 const StyledTextfield2 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 5;
-  border: 1px solid white;
-  text-align: center;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+  text-align: left;
+  > p {
+    font-weight: medium;
+    padding-left: 30px;
+    color: white;
+    font-size: 2vw;
+    line-height: 1vw;
+  }
 `;
 
 const StyledTextField21 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 6;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 0.35vw solid white;
+  padding-left: 28px;
+  
   > input {
     background: linear-gradient(
       0deg,
@@ -53,42 +68,51 @@ const StyledTextField21 = styled.div`
       rgba(0, 212, 255, 0) 0%,
       rgba(158, 51, 198, 0.7581233176864496) 100%
     );
-    width: 500px;
-    height: 50px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border: 1px solid white;
+    width: 60vw;
+    height: 8vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 2.5vw;
+    border: 0.25vw solid white;
     align-items: center;
     color: white;
     transition: 0.6s;
+    &:hover {
+    background-color: white;
+  }
 
     &:hover {
-    color: turquoise;
+    color: purple;
   }
 `;
 
 const StyledTextField22 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 7;
-  border: 1px solid white;
+  border-left: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
   > p {
     font-weight: medium;
-    color: white;
     padding-left: 30px;
-    font-size: 4.4rem;
+    font-size: 1vw;
+    padding-left: 30px;
+    color: white;
   }
 `;
 
 const Area1 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 5 / 8;
-  border: 1px solid white;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
 `;
 
 const Area2 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 5 / 8;
-  border: 1px solid white;
+  border-right: 0.35vw solid white;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -102,20 +126,32 @@ const StyledTextfield3 = styled.div`
   grid-row: 8 / 14;
   font-size: 3.4rem;
   font-weight: medium;
-  border: 1px solid white;
+  border-left: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
   color: white;
+  > p {
+    font-weight: medium;
+    color: white;
+    padding-left: 30px;
+    font-size: 4vw;
+    padding-left: 30px;
+  }
 `;
+/* line height??? */
 
 const Area3 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 8 / 14;
-  border: 1px solid white;
+  border-left: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
 `;
 
 const Area4 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 8 / 14;
-  border: 1px solid white;
+  border-left: 0.35vw solid white;
+  border-right: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
