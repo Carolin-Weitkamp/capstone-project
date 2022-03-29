@@ -60,6 +60,10 @@ const StyledTextField21 = styled.div`
     border: 1px solid white;
     align-items: center;
     color: white;
+    transition: 0.6s;
+
+    &:hover {
+    color: turquoise;
   }
 `;
 
