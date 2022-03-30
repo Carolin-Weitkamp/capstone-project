@@ -14,28 +14,21 @@ import {
   Area3,
 } from '../components/BackgroundGrid/BackgroundGrid';
 import { StyledInput } from '../components/InputFieldUrl/InputUrl';
-import { useState } from 'react';
 
 export async function getServerSideProps() {
   // Fetch data from external API
-
   const res = await fetch(
     'https://api.websitecarbon.com/site?url=https%3A%2F%2Fwww.wholegraindigital.com'
   );
   const data = await res.json();
-  setWebsiteData(data);
   console.log(data);
 
   // Pass data to the page via props
   return { props: { data } };
 }
 
-// muss ich hier mappen? eigentlich nicht!
-
 export default function Home({ data }) {
-  const [websiteData, setWebsiteData] = useState(null);
-
-  console.log(websiteData);
+  console.log(data);
   return (
     <>
       <Head>
@@ -48,15 +41,16 @@ export default function Home({ data }) {
 
       <StyledBackgroundGrid>
         <StyledTextfield1>
-          <p>
-            {websiteData.green === true ? <p>Is green</p> : <p>Is not green</p>}
-          </p>
+          <p>Deine Website wird //{data.green} mit grüner Energie gehostet</p>
         </StyledTextfield1>
         <StyledTextfield2>
-          <p>Type in your URL: {data.url} </p>
+          <p>
+            Und sie ist sauberer als {data.cleanerThan} % der bereits getesteten
+            Websites
+          </p>
         </StyledTextfield2>
         <StyledTextField21>
-          <StyledInput></StyledInput>
+          <StyledInput>{data.url}</StyledInput>
         </StyledTextField21>
         <StyledTextField22>
           <StyledCheckButton>CHECK</StyledCheckButton>
