@@ -13,6 +13,7 @@ import {
   Area4,
   Area3,
 } from '../components/BackgroundGrid/BackgroundGrid';
+import { StyledInput } from '../components/InputFieldUrl/InputUrl';
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -45,14 +46,17 @@ export default function Home({ data }) {
         <StyledTextfield2>
           <p>Type in your URL: {data.url} </p>
         </StyledTextfield2>
-        <StyledTextField21></StyledTextField21>
+        <StyledTextField21>
+          <StyledInput></StyledInput>
+        </StyledTextField21>
         <StyledTextField22>
+          <StyledCheckButton>CHECK</StyledCheckButton>
           <p>Nutzungshinweise / Verarbeitungshinweise</p>
         </StyledTextField22>
         <Area1></Area1>
         <Area2></Area2>
         <StyledTextfield3>
-          <p>Estimates the carbonn footprint of your website.</p>
+          <p>Estimates the carbon footprint of your website.</p>
         </StyledTextfield3>
         <Area3></Area3>
         <Area4></Area4>

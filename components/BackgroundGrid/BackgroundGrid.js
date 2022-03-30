@@ -14,8 +14,8 @@ export {
 
 const StyledBackgroundGrid = styled.div`
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
 `;
@@ -34,9 +34,6 @@ const StyledTextfield1 = styled.div`
     padding-left: 30px;
     font-size: 8vw;
     transition: 1s;
-    &:hover {
-      color: purple;
-    }
   }
 `;
 
@@ -67,11 +64,11 @@ const StyledTextField22 = styled.div`
   grid-row: 7;
   border-left: 0.35vw solid white;
   border-bottom: 0.35vw solid white;
+  padding-left: 30px;
   > p {
     font-weight: medium;
     padding-left: 30px;
     font-size: 1vw;
-    padding-left: 30px;
     color: white;
   }
 `;
