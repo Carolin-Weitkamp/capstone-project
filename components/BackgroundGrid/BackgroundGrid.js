@@ -28,7 +28,7 @@ const StyledTextfield1 = styled.div`
   border-right: 0.35vw solid white;
   text-align: bottom;
   font-weight: medium;
-  > p {
+  > div {
     font-weight: medium;
     color: white;
     padding-left: 30px;

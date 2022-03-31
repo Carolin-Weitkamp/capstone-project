@@ -15,27 +15,34 @@ import {
 } from '../components/BackgroundGrid/BackgroundGrid';
 import { StyledInput } from '../components/InputFieldUrl/InputUrl';
 import { useState } from 'react';
+import useSWR from 'swr';
+import { useRouter } from 'next/router';
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-
-  const res = await fetch(
-    'https://api.websitecarbon.com/site?url=https%3A%2F%2Fwww.wholegraindigital.com'
-  );
-  const data = await res.json();
-  setWebsiteData(data);
+export default function Home({}) {
+  const router = useRouter();
+  const url = router.query.url; // url? if not url
+  const { data } = useSWR(`/api/carbon?url=${encodeURIComponent(url)}`, {
+    isPaused: () => !url,
+  });
   console.log(data);
+  function handleSubmit(event) {
+    event.preventDefault();
+    const newUrl = event.target.elements.urlInput.value;
+    router.push({
+      pathname: router.pathname, // auf diese Pfad wird weitergeleitet
+      query: { url: newUrl }, // und das ist die url die eingegeben wird
+    });
+  }
 
-  // Pass data to the page via props
-  return { props: { data } };
-}
+  if (!url) {
+    return (
+      <form onSubmit={handleSubmit}>
+        <StyledInput name="urlInput" type="text" required></StyledInput>
+        <StyledCheckButton type="submit">CHECK</StyledCheckButton>
+      </form>
+    );
+  }
 
-// muss ich hier mappen? eigentlich nicht!
-
-export default function Home({ data }) {
-  const [websiteData, setWebsiteData] = useState(null);
-
-  console.log(websiteData);
   return (
     <>
       <Head>
@@ -48,18 +55,26 @@ export default function Home({ data }) {
 
       <StyledBackgroundGrid>
         <StyledTextfield1>
-          <p>
-            {websiteData.green === true ? <p>Is green</p> : <p>Is not green</p>}
-          </p>
+          {data ? (
+            <div>
+              {data.green === true ? (
+                <p>die Website green</p>
+              ) : (
+                <p>Is not green</p>
+              )}
+            </div>
+          ) : null}
         </StyledTextfield1>
         <StyledTextfield2>
-          <p>Type in your URL: {data.url} </p>
+          {data ? <p>Type in your URL: {data.url} </p> : null}
         </StyledTextfield2>
         <StyledTextField21>
-          <StyledInput></StyledInput>
+          <form onSubmit={handleSubmit}>
+            <StyledInput name="urlInput" type="text" required></StyledInput>
+            <StyledCheckButton type="submit">CHECK</StyledCheckButton>
+          </form>
         </StyledTextField21>
         <StyledTextField22>
-          <StyledCheckButton>CHECK</StyledCheckButton>
           <p>Nutzungshinweise / Verarbeitungshinweise</p>
         </StyledTextField22>
         <Area1></Area1>
