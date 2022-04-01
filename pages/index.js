@@ -3,16 +3,28 @@ import styled from 'styled-components';
 import { StyledCheckButton } from '../components/CheckButton/CheckButton';
 import {
   StyledBackgroundGrid,
-  StyledTextfield1,
-  StyledTextfield2,
-  StyledTextField21,
-  StyledTextField22,
-  StyledTextfield3,
   Area1,
   Area2,
-  Area4,
   Area3,
+  Area4,
+  Area5,
+  Area6,
+  Area7,
+  Area8,
+  Area9,
 } from '../components/BackgroundGrid/BackgroundGrid';
+import {
+  Results,
+  Result1,
+  Result2,
+  Result3,
+  Result4,
+  Result5,
+  Result6,
+  Result7,
+  Result8,
+  Result9,
+} from '../components/Results/Results';
 import { StyledInput } from '../components/InputFieldUrl/InputUrl';
 import { useState } from 'react';
 import useSWR from 'swr';
@@ -38,29 +50,31 @@ export default function Home({}) {
     return (
       <form onSubmit={handleSubmit}>
         <StyledBackgroundGrid>
-          <StyledTextfield1>
+          <Area1>
             <div>Wie grün ist deine Website?</div>
-          </StyledTextfield1>
-          <StyledTextfield2>
+          </Area1>
+          <Area2>
             <div>Wenn du es wissen willst, tippe hier deine Url ein:</div>
-          </StyledTextfield2>
-          <StyledTextField21>
-            <StyledInput name="urlInput" type="text" required></StyledInput>
-            <StyledCheckButton type="submit">CHECK</StyledCheckButton>
-          </StyledTextField21>
-          <StyledTextField22>
+          </Area2>
+          <Area3>
+            <div>
+              <StyledInput name="urlInput" type="text" required></StyledInput>
+              <StyledCheckButton type="submit">CHECK</StyledCheckButton>
+            </div>
+          </Area3>
+          <Area4>
             <p>Anhand von Parametern. blablabla</p>
-          </StyledTextField22>
-          <Area1></Area1>
-          <Area2></Area2>
-          <StyledTextfield3>
+          </Area4>
+          <Area5></Area5>
+          <Area6></Area6>
+          <Area7>
             <p>
               Dieses Tool gibt dir einen Überblick wie umweltfreundlich deine
               Website ist.
             </p>
-          </StyledTextfield3>
-          <Area3></Area3>
-          <Area4></Area4>
+          </Area7>
+          <Area8></Area8>
+          <Area9></Area9>
         </StyledBackgroundGrid>
       </form>
     );
@@ -76,19 +90,21 @@ export default function Home({}) {
         ></link>
       </Head>
 
-      <StyledBackgroundGrid>
-        <StyledTextfield1>
+      <Results>
+        <Result1>
           {data ? (
             <div>
               {data.green === true ? (
-                <p>diese Webseite wird grün gehostet</p>
+                <p style={{ color: 'green' }}>
+                  diese Webseite wird grün gehostet
+                </p>
               ) : (
                 <p>diese Webseite wird nicht grün gehostet</p>
               )}
             </div>
           ) : null}
-        </StyledTextfield1>
-        <StyledTextfield2>
+        </Result1>
+        <Result2>
           {data ? (
             <div>
               {data.cleanerThan > 0.5 ? (
@@ -98,8 +114,8 @@ export default function Home({}) {
               )}
             </div>
           ) : null}
-        </StyledTextfield2>
-        <StyledTextField21>
+        </Result2>
+        <Result3>
           {data ? (
             <div>
               <p>
@@ -107,25 +123,29 @@ export default function Home({}) {
               </p>
             </div>
           ) : null}
-        </StyledTextField21>
-        <StyledTextField22>
-          <p>Nutzungshinweise / Verarbeitungshinweise</p>
-        </StyledTextField22>
-        <Area1></Area1>
-        <Area2></Area2>
-        <StyledTextfield3>
+        </Result3>
+        <Result4>
+          {data ? (
+            <div>
+              <p>Verbrauchte Liter: {data.statistics.co2.grid.litres}</p>
+            </div>
+          ) : null}
+        </Result4>
+        <Result5></Result5>
+        <Result6></Result6>
+        <Result7>
           {data ? (
             <div>
               <p>
-                Die Seite verbraucht ungefähr {data.statistics.co2.grid.grams}{' '}
+                Die Seite verbraucht ungefähr{data.statistics.co2.grid.grams}
                 Gramm CO2 bei jedem Ladevorgang
               </p>
             </div>
           ) : null}
-        </StyledTextfield3>
-        <Area3></Area3>
-        <Area4></Area4>
-      </StyledBackgroundGrid>
+        </Result7>
+        <Result8></Result8>
+        <Result9></Result9>
+      </Results>
     </>
   );
 }
