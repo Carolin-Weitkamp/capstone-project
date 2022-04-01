@@ -16,6 +16,7 @@ import {
 import {
   Results,
   Result1,
+  GreenHosted,
   Result2,
   Result3,
   Result4,
@@ -95,9 +96,7 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.green === true ? (
-                <p style={{ color: 'green' }}>
-                  diese Webseite wird grün gehostet
-                </p>
+                <GreenHosted>diese Webseite wird grün gehostet</GreenHosted>
               ) : (
                 <p>diese Webseite wird nicht grün gehostet</p>
               )}

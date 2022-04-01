@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export {
   Results,
+  GreenHosted,
   Result1,
   Result2,
   Result3,
@@ -36,6 +37,14 @@ const Result1 = styled.div`
     font-size: 8vw;
     transition: 1s;
   }
+`;
+
+const GreenHosted = styled.p`
+  font-weight: medium;
+  color: green;
+  padding-left: 30px;
+  font-size: 8vw;
+  transition: 1s;
 `;
 
 const Result2 = styled.div`
