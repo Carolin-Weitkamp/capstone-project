@@ -15,7 +15,7 @@ export {
 const StyledBackgroundGrid = styled.div`
   display: grid;
   max-width: 100vw;
-  max-height: 100vh;
+  min-height: 100vh;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
 `;
@@ -43,7 +43,7 @@ const StyledTextfield2 = styled.div`
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;
   text-align: left;
-  > p {
+  > div {
     font-weight: medium;
     padding-left: 30px;
     color: white;
@@ -56,7 +56,12 @@ const StyledTextField21 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 6;
   border-left: 0.35vw solid white;
-  padding-left: 28px;
+  > div {
+    font-weight: medium;
+    padding-left: 30px;
+    font-size: 4vw;
+    color: white;
+  }
 `;
 
 const StyledTextField22 = styled.div`
@@ -64,7 +69,6 @@ const StyledTextField22 = styled.div`
   grid-row: 7;
   border-left: 0.35vw solid white;
   border-bottom: 0.35vw solid white;
-  padding-left: 30px;
   > p {
     font-weight: medium;
     padding-left: 30px;

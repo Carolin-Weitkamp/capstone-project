@@ -37,8 +37,31 @@ export default function Home({}) {
   if (!url) {
     return (
       <form onSubmit={handleSubmit}>
-        <StyledInput name="urlInput" type="text" required></StyledInput>
-        <StyledCheckButton type="submit">CHECK</StyledCheckButton>
+        <StyledBackgroundGrid>
+          <StyledTextfield1>
+            <div>Wie grün ist deine Website?</div>
+          </StyledTextfield1>
+          <StyledTextfield2>
+            <div>Wenn du es wissen willst, tippe hier deine Url ein:</div>
+          </StyledTextfield2>
+          <StyledTextField21>
+            <StyledInput name="urlInput" type="text" required></StyledInput>
+            <StyledCheckButton type="submit">CHECK</StyledCheckButton>
+          </StyledTextField21>
+          <StyledTextField22>
+            <p>Anhand von Parametern. blablabla</p>
+          </StyledTextField22>
+          <Area1></Area1>
+          <Area2></Area2>
+          <StyledTextfield3>
+            <p>
+              Dieses Tool gibt dir einen Überblick wie umweltfreundlich deine
+              Website ist.
+            </p>
+          </StyledTextfield3>
+          <Area3></Area3>
+          <Area4></Area4>
+        </StyledBackgroundGrid>
       </form>
     );
   }
@@ -58,21 +81,32 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.green === true ? (
-                <p>die Website green</p>
+                <p>diese Webseite wird grün gehostet</p>
               ) : (
-                <p>Is not green</p>
+                <p>diese Webseite wird nicht grün gehostet</p>
               )}
             </div>
           ) : null}
         </StyledTextfield1>
         <StyledTextfield2>
-          {data ? <p>Type in your URL: {data.url} </p> : null}
+          {data ? (
+            <div>
+              {data.cleanerThan > 0.5 ? (
+                <p> zählt zu den 50% der sauberen Websites</p>
+              ) : (
+                <p>zählt zu den 50% der dreckigen Website</p>
+              )}
+            </div>
+          ) : null}
         </StyledTextfield2>
         <StyledTextField21>
-          <form onSubmit={handleSubmit}>
-            <StyledInput name="urlInput" type="text" required></StyledInput>
-            <StyledCheckButton type="submit">CHECK</StyledCheckButton>
-          </form>
+          {data ? (
+            <div>
+              <p>
+                beim Laden der Webseite werden {data.bytes} Bytes übertragenen.
+              </p>
+            </div>
+          ) : null}
         </StyledTextField21>
         <StyledTextField22>
           <p>Nutzungshinweise / Verarbeitungshinweise</p>
@@ -80,7 +114,14 @@ export default function Home({}) {
         <Area1></Area1>
         <Area2></Area2>
         <StyledTextfield3>
-          <p>Estimates the carbon footprint of your website.</p>
+          {data ? (
+            <div>
+              <p>
+                Die Seite verbraucht ungefähr {data.statistics.co2.grid.grams}{' '}
+                Gramm CO2 bei jedem Ladevorgang
+              </p>
+            </div>
+          ) : null}
         </StyledTextfield3>
         <Area3></Area3>
         <Area4></Area4>
