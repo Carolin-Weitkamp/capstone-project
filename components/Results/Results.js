@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 export {
-  StyledBackgroundGrid,
-  Area1,
-  Area2,
-  Area3,
-  Area4,
-  Area5,
-  Area6,
-  Area7,
-  Area8,
-  Area9,
+  Results,
+  Result1,
+  Result2,
+  Result3,
+  Result4,
+  Result5,
+  Result6,
+  Result7,
+  Result8,
+  Result9,
 };
 
-const StyledBackgroundGrid = styled.div`
+const Results = styled.div`
+  background-color: black;
   display: grid;
   max-width: 100vw;
   min-height: 100vh;
@@ -20,7 +21,7 @@ const StyledBackgroundGrid = styled.div`
   grid-template-rows: repeat(14, [col-start]);
 `;
 
-const Area1 = styled.div`
+const Result1 = styled.div`
   grid-column: col-start / span 6;
   grid-row: 1 / 5;
   border-left: 0.35vw solid white;
@@ -37,7 +38,7 @@ const Area1 = styled.div`
   }
 `;
 
-const Area2 = styled.div`
+const Result2 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 5;
   border-left: 0.35vw solid white;
@@ -52,10 +53,12 @@ const Area2 = styled.div`
   }
 `;
 
-const Area3 = styled.div`
+const Result3 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 6;
   border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+
   > div {
     font-weight: medium;
     padding-left: 30px;
@@ -64,12 +67,13 @@ const Area3 = styled.div`
   }
 `;
 
-const Area4 = styled.div`
+const Result4 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 7;
   border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
   border-bottom: 0.35vw solid white;
-  > p {
+  > div {
     font-weight: medium;
     padding-left: 30px;
     font-size: 1vw;
@@ -77,14 +81,14 @@ const Area4 = styled.div`
   }
 `;
 
-const Area5 = styled.div`
+const Result5 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 5 / 8;
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;
 `;
 
-const Area6 = styled.div`
+const Result6 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 5 / 8;
   border-right: 0.35vw solid white;
@@ -98,7 +102,7 @@ const Area6 = styled.div`
   );
 `;
 
-const Area7 = styled.div`
+const Result7 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 8 / 14;
   font-size: 3.4rem;
@@ -106,7 +110,7 @@ const Area7 = styled.div`
   border-left: 0.35vw solid white;
   border-bottom: 0.35vw solid white;
   color: white;
-  > p {
+  > div {
     font-weight: medium;
     color: white;
     padding-left: 30px;
@@ -116,14 +120,14 @@ const Area7 = styled.div`
 `;
 /* line height??? */
 
-const Area8 = styled.div`
+const Result8 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 8 / 14;
   border-left: 0.35vw solid white;
   border-bottom: 0.35vw solid white;
 `;
 
-const Area9 = styled.div`
+const Result9 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 8 / 14;
   border-left: 0.35vw solid white;
