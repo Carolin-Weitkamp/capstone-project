@@ -14,8 +14,8 @@ export {
 
 const StyledBackgroundGrid = styled.div`
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
 `;
@@ -28,15 +28,12 @@ const StyledTextfield1 = styled.div`
   border-right: 0.35vw solid white;
   text-align: bottom;
   font-weight: medium;
-  > p {
+  > div {
     font-weight: medium;
     color: white;
     padding-left: 30px;
     font-size: 8vw;
     transition: 1s;
-    &:hover {
-      color: purple;
-    }
   }
 `;
 
@@ -46,7 +43,7 @@ const StyledTextfield2 = styled.div`
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;
   text-align: left;
-  > p {
+  > div {
     font-weight: medium;
     padding-left: 30px;
     color: white;
@@ -59,30 +56,11 @@ const StyledTextField21 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 6;
   border-left: 0.35vw solid white;
-  padding-left: 28px;
-  
-  > input {
-    background: linear-gradient(
-      0deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 212, 255, 0) 0%,
-      rgba(158, 51, 198, 0.7581233176864496) 100%
-    );
-    width: 60vw;
-    height: 8vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    font-size: 2.5vw;
-    border: 0.25vw solid white;
-    align-items: center;
+  > div {
+    font-weight: medium;
+    padding-left: 30px;
+    font-size: 4vw;
     color: white;
-    transition: 0.6s;
-    &:hover {
-    background-color: white;
-  }
-
-    &:hover {
-    color: purple;
   }
 `;
 
@@ -95,7 +73,6 @@ const StyledTextField22 = styled.div`
     font-weight: medium;
     padding-left: 30px;
     font-size: 1vw;
-    padding-left: 30px;
     color: white;
   }
 `;
