@@ -130,7 +130,9 @@ export default function Home({}) {
         <Result4>
           {data ? (
             <div>
-              <p>Verbrauchte Liter: {data.statistics.co2.grid.litres}</p>
+              <p>
+                Verbrauchte Liter: {data.statistics.co2.grid.litres.toFixed(3)}
+              </p>
             </div>
           ) : null}
         </Result4>
@@ -140,7 +142,8 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                Die Seite verbraucht ungefähr{data.statistics.co2.grid.grams}
+                Die Seite verbraucht ungefähr
+                {data.statistics.co2.grid.grams.toFixed(2)}
                 Gramm CO2 bei jedem Ladevorgang
               </p>
             </div>
