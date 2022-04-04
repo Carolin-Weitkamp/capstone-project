@@ -63,7 +63,7 @@ const Area2 = styled.div`
   }
   @media screen and (min-width: 700px) {
     > div {
-      padding: 50px 50px 25px 50px;
+      padding: 30px 50px 20px 50px;
       font-size: 1.5rem;
     }
   }
