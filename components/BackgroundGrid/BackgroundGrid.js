@@ -14,8 +14,8 @@ export {
 
 const StyledBackgroundGrid = styled.div`
   display: grid;
-  max-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  /* height: 100vh; */
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
 `;
@@ -31,9 +31,21 @@ const Area1 = styled.div`
   > div {
     font-weight: medium;
     color: white;
-    padding-left: 30px;
-    font-size: 8vw;
+    padding: 30px 30px 60px 30px;
+    font-size: 2.5rem;
     transition: 1s;
+  }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding: 50px 50px 100px 50px;
+      font-size: 4rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 50px 50px 200px 50px;
+      font-size: 8rem;
+    }
   }
 `;
 
