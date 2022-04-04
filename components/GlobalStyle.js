@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
     padding: 0;
-    background-color: #89A693;
+    background-color: black;
 }
 :root {
     font-family: 'Roboto', sans-serif;

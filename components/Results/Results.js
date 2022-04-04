@@ -15,8 +15,8 @@ export {
 const Results = styled.div`
   background-color: black;
   display: grid;
-  max-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  /* height: 100vh; */
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
 `;
@@ -32,9 +32,21 @@ const Result1 = styled.div`
   > div {
     font-weight: medium;
     color: white;
-    padding-left: 30px;
-    font-size: 8vw;
+    padding: 30px 30px 30px 30px;
+    font-size: 2.5rem;
     transition: 1s;
+  }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding: 50px 50px 100px 50px;
+      font-size: 4rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 50px 50px 200px 50px;
+      font-size: 8rem;
+    }
   }
 `;
 
@@ -46,10 +58,21 @@ const Result2 = styled.div`
   text-align: left;
   > div {
     font-weight: medium;
-    padding-left: 30px;
+    padding: 15px 30px 15px 30px;
     color: white;
-    font-size: 2vw;
-    line-height: 1vw;
+    font-size: 1rem;
+  }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding: 50px 50px 25px 50px;
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 50px 50px 200px 50px;
+      font-size: 3rem;
+    }
   }
 `;
 
@@ -61,9 +84,19 @@ const Result3 = styled.div`
 
   > div {
     font-weight: medium;
-    padding-left: 30px;
-    font-size: 4vw;
+    padding: 15px 30px 15px 30px;
     color: white;
+    font-size: 1.2rem;
+  }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding-left: 50px;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 0px 0px 0px 50px;
+    }
   }
 `;
 
@@ -75,9 +108,21 @@ const Result4 = styled.div`
   border-bottom: 0.35vw solid white;
   > div {
     font-weight: medium;
-    padding-left: 30px;
-    font-size: 1vw;
+    padding: 15px 30px 15px 30px;
     color: white;
+    font-size: 1rem;
+  }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding: 25px 50px 25px 50px;
+      font-size: 1rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 50px 50px 200px 50px;
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -103,6 +148,7 @@ const Result6 = styled.div`
 `;
 
 const Result7 = styled.div`
+  margin-bottom: 58px;
   grid-column: col-start / span 4;
   grid-row: 8 / 14;
   font-size: 3.4rem;
@@ -112,13 +158,23 @@ const Result7 = styled.div`
   color: white;
   > div {
     font-weight: medium;
+    padding: 15px 30px 15px 30px;
     color: white;
-    padding-left: 30px;
-    font-size: 4vw;
-    padding-left: 30px;
+    font-size: 1rem;
+  }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding: 50px 50px 100px 50px;
+      font-size: 2rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 50px 50px 200px 50px;
+      font-size: 6rem;
+    }
   }
 `;
-/* line height??? */
 
 const Result8 = styled.div`
   grid-column: col-start 5 / span 1;
