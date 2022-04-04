@@ -30,6 +30,7 @@ import { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import NavBar from '../components/NavBar/NavBar';
+import LoadingSide from '../components/LoadingSide/LoadingSide';
 
 export default function Home({}) {
   const router = useRouter();
@@ -80,6 +81,15 @@ export default function Home({}) {
           <Area9></Area9>
         </StyledBackgroundGrid>
       </form>
+    );
+  }
+
+  if (!data) {
+    return (
+      <>
+        <LoadingSide></LoadingSide>
+        <NavBar></NavBar>;
+      </>
     );
   }
 
