@@ -1,16 +1,5 @@
 import styled from 'styled-components';
-export {
-  Results,
-  Result1,
-  Result2,
-  Result3,
-  Result4,
-  Result5,
-  Result6,
-  Result7,
-  Result8,
-  Result9,
-};
+export { ResultSide };
 
 const Results = styled.div`
   background-color: black;
