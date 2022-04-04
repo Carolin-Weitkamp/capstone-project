@@ -60,6 +60,8 @@ export default function Home({}) {
           <Area3>
             <div>
               <StyledInput name="urlInput" type="text" required></StyledInput>
+            </div>
+            <div>
               <StyledCheckButton type="submit">CHECK</StyledCheckButton>
             </div>
           </Area3>

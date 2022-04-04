@@ -57,10 +57,21 @@ const Area2 = styled.div`
   text-align: left;
   > div {
     font-weight: medium;
-    padding-left: 30px;
+    padding: 30px 30px 15px 30px;
     color: white;
-    font-size: 2vw;
-    line-height: 1vw;
+    font-size: 1rem;
+  }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding: 50px 50px 25px 50px;
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 50px 50px 200px 50px;
+      font-size: 3rem;
+    }
   }
 `;
 
@@ -74,6 +85,16 @@ const Area3 = styled.div`
     font-size: 4vw;
     color: white;
   }
+  @media screen and (min-width: 700px) {
+    > div {
+      padding-left: 50px;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 0px 0px 0px 50px;
+    }
+  }
 `;
 
 const Area4 = styled.div`
@@ -83,9 +104,21 @@ const Area4 = styled.div`
   border-bottom: 0.35vw solid white;
   > p {
     font-weight: medium;
-    padding-left: 30px;
-    font-size: 1vw;
+    padding: 5px 30px 10px 30px;
+    font-size: 0.5rem;
     color: white;
+  }
+  @media screen and (min-width: 700px) {
+    > p {
+      padding: 25px 50px 25px 50px;
+      font-size: 1rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > p {
+      padding: 50px 50px 200px 50px;
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -121,12 +154,23 @@ const Area7 = styled.div`
   > p {
     font-weight: medium;
     color: white;
-    padding-left: 30px;
-    font-size: 4vw;
+    padding: 30px 30px 15px 30px;
+    font-size: 1.5rem;
     padding-left: 30px;
   }
+  @media screen and (min-width: 700px) {
+    > p {
+      padding: 50px 50px 100px 50px;
+      font-size: 3rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    > p {
+      padding: 50px 50px 200px 50px;
+      font-size: 6rem;
+    }
+  }
 `;
-/* line height??? */
 
 const Area8 = styled.div`
   grid-column: col-start 5 / span 1;
