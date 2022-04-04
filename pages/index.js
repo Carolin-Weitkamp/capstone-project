@@ -121,7 +121,8 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                beim Laden der Webseite werden {data.bytes} Bytes übertragenen.
+                beim Laden der Webseite werden {data.bytes.toFixed(2)} Bytes
+                übertragenen.
               </p>
             </div>
           ) : null}
