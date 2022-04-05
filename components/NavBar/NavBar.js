@@ -6,6 +6,7 @@ function NavBar() {
     <NavBarStyle>
       {/* <Link href="/" passHref></Link> */}
       <p>Home</p>
+      <p>Test</p>
     </NavBarStyle>
   );
 }
@@ -28,10 +29,24 @@ const NavBarStyle = styled.div`
     display: flex;
     color: black;
     padding-left: 30px;
-    font-size: 20px;
+    font-size: 15px;
 
-    &:active {
+    /* &:active {
       color-scheme: pink;
+    } */
+  }
+  @media screen and (min-width: 700px) {
+    height: 60px;
+    > p {
+      padding-left: 50px;
+      font-size: 25px;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    height: 100px;
+    > p {
+      padding-left: 50px;
+      font-size: 40px;
     }
   }
 `;
