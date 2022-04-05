@@ -4,6 +4,7 @@ export { NavBar };
 function NavBar() {
   return (
     <NavBarStyle>
+      {/* <Link href="/" passHref></Link> */}
       <p>Home</p>
     </NavBarStyle>
   );
@@ -13,22 +14,24 @@ export default NavBar;
 const NavBarStyle = styled.div`
   position: fixed;
   display: flex;
-  flex-direction: row;
+  justify-content: start;
+  align-items: center;
   z-index: 1;
   border: 0.35vw solid white;
   width: 100vw;
-  height: 10vh;
-  bottom: 0;
+  height: 40px;
+  bottom: 0px;
   right: 0;
-  background: black;
+  background: white;
   > p {
-    margin-bottom: 0;
     font-weight: medium;
-    color: white;
+    display: flex;
+    color: black;
     padding-left: 30px;
-    font-size: 4vw;
-    bottom: 0;
-    align-items: center;
-    justify-content: space-evenly;
+    font-size: 20px;
+
+    &:active {
+      color-scheme: pink;
+    }
   }
 `;

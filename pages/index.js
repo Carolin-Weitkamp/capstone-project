@@ -80,6 +80,7 @@ export default function Home({}) {
           <Area8></Area8>
           <Area9></Area9>
         </StyledBackgroundGrid>
+        <NavBar> Hallo </NavBar>
       </form>
     );
   }
@@ -103,7 +104,6 @@ export default function Home({}) {
         ></link>
       </Head>
 
-      <NavBar> Hallo </NavBar>
       <Results>
         <Result1>
           {data ? (
@@ -164,6 +164,7 @@ export default function Home({}) {
         <Result8></Result8>
         <Result9></Result9>
       </Results>
+      <NavBar></NavBar>
     </>
   );
 }
