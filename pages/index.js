@@ -48,6 +48,14 @@ export default function Home({}) {
     });
   }
 
+  const fetcher = (...args) => fetch(...args).then(res => res.json());
+
+  const { data: newData } = useSWR(
+    `https://admin.thegreenwebfoundation.org/data/directory/`,
+    fetcher
+  );
+  console.log(newData, 'new Data');
+
   if (!url) {
     return (
       <form onSubmit={handleSubmit}>
