@@ -8,7 +8,7 @@ const StyledCheckButton = styled.button`
     rgba(0, 212, 255, 0) 0%,
     rgba(158, 51, 198, 0.7581233176864496) 100%
   );
-  width: 100px;
+  /* width: 100px; */
   height: 35px;
   margin: 5px 0 5px 0;
   font-size: 1rem;
