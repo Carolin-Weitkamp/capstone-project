@@ -8,14 +8,10 @@ const StyledCheckButton = styled.button`
     rgba(0, 212, 255, 0) 0%,
     rgba(158, 51, 198, 0.7581233176864496) 100%
   );
-  /* width: 100px; */
-  height: 35px;
-  margin: 5px 0 5px 0;
   font-size: 1rem;
   border: 0.25vw solid white;
-  padding: 0px 10px 0px 6px;
-  /* align-items: center; */
-  text-align: center;
+  padding: 5px 20px 5px 20px;
+  align-self: center;
   color: white;
   transition: 0.6s;
   &:hover {
@@ -26,16 +22,13 @@ const StyledCheckButton = styled.button`
     color: purple;
   }
   @media screen and (min-width: 700px) {
-    width: 200px;
-    height: 55px;
     margin: 10px 10px 10px 0;
+    padding: 10px 40px 10px 40px;
     font-size: 2rem;
   }
   @media screen and (min-width: 1500px) {
-    width: 200px;
-    height: 140px;
     margin: 20px 0 20px 0;
-    padding: 0px 40px 0px 24px;
+    padding: 20px 80px 20px 80px;
     font-size: 4rem;
   }
 `;
