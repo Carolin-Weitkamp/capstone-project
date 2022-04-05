@@ -38,7 +38,10 @@ export default function Home({}) {
   const { data } = useSWR(`/api/carbon?url=${encodeURIComponent(url)}`, {
     isPaused: () => !url,
   });
-  console.log(data);
+
+  const { data: newData } = useSWR(`/api/greenhosts`);
+  console.log(newData);
+
   function handleSubmit(event) {
     event.preventDefault();
     const newUrl = event.target.elements.urlInput.value;
@@ -47,14 +50,6 @@ export default function Home({}) {
       query: { url: newUrl }, // und das ist die url die eingegeben wird
     });
   }
-
-  const fetcher = (...args) => fetch(...args).then(res => res.json());
-
-  const { data: newData } = useSWR(
-    `https://admin.thegreenwebfoundation.org/data/directory/`,
-    fetcher
-  );
-  console.log(newData, 'new Data');
 
   if (!url) {
     return (
@@ -176,3 +171,10 @@ export default function Home({}) {
     </>
   );
 }
+
+// const fetcher = (...args) => fetch(...args).then(res => res.json());
+// const { data: newData } = useSWR(
+//   `https://admin.thegreenwebfoundation.org/data/directory/`,
+//   fetcher
+// );
+// console.log(newData, 'new Data');

@@ -15,5 +15,3 @@ export default async function handler(request, response) {
     response.status(500).json({ error: error.message });
   }
 }
-
-// Query Parameter
