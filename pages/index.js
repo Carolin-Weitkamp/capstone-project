@@ -40,7 +40,12 @@ export default function Home({}) {
   });
 
   const { data: newData } = useSWR(`/api/greenhosts`);
+  // console.log(JSON.stringify(newData));
   console.log(newData);
+  // newData.entries(obj);
+  // newData[0].map(data => {
+  //   console.log(data);
+  // });
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -97,6 +102,16 @@ export default function Home({}) {
     );
   }
 
+  // if (data.green === false ?) {
+  //   return (
+  //     <>
+  //       <Result1>
+  //         <div> Eine lange Liste von grünen Servern</div>
+  //       </Result1>
+  //     </>
+  //   );
+  // }
+
   return (
     <>
       <Head>
@@ -116,7 +131,10 @@ export default function Home({}) {
                   diese Webseite wird grün gehostet
                 </p>
               ) : (
-                <p>diese Webseite wird nicht grün gehostet</p>
+                <div>
+                  <p>diese Webseite wird nicht grün gehostet</p>
+                  <StyledCheckButton>zu grün wechseln</StyledCheckButton>
+                </div>
               )}
             </div>
           ) : null}
