@@ -40,7 +40,46 @@ export default function Home({}) {
   });
 
   const { data: newData } = useSWR(`/api/greenhosts`);
-  console.log(newData);
+  // console.log(newData);
+  const arrayFromObject = newData && Object.entries(newData);
+  const newArrayWithObjects = arrayFromObject?.map(el => {
+    return { ...el[1] };
+  });
+  const filteredArrayForProvidersOnly = newArrayWithObjects?.filter(
+    el => el.providers && el?.providers.length !== 0
+  );
+  console.log(filteredArrayForProvidersOnly);
+  const firstElement =
+    filteredArrayForProvidersOnly &&
+    filteredArrayForProvidersOnly[0].countryname;
+  console.log(firstElement);
+
+  // const firstElement = myArray[0];
+  // console.log(firstElement);
+
+  // console.log(filteredArrayForProvidersOnly);
+
+  // console.log(JSON.stringify(newData));
+  // console.log(newData);
+  // const myObject = new Object();
+  // myObject.AD = { data: 'Andorra' };
+  // myObject.AF = { data: 'Afghanistan' };
+
+  // console.log('this is my object: ', myObject);
+  // console.log("this is my object's andorra data: ", myObject.AD);
+  // console.log("this is my object's andorra data: ", myObject.AD.data);
+  // console.log("this is my object's afhganistan data: ", myObject.AF);
+  // console.log("this is my object's afhganistan data: ", myObject.AF.data);
+
+  // newData.entries(obj);
+  // newData[0].map(data => {
+  //   console.log(data);
+  // });
+
+  // function handleSubmitHosts(event) {
+  //   event.preventDefault();
+  //   onSubmitHosts(event.target.elements.checkHosts);
+  // }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -50,6 +89,10 @@ export default function Home({}) {
       query: { url: newUrl }, // und das ist die url die eingegeben wird
     });
   }
+
+  // const handleClick = () => {
+
+  // }
 
   if (!url) {
     return (
@@ -97,6 +140,16 @@ export default function Home({}) {
     );
   }
 
+  // if (data.green === false ?) {
+  //   return (
+  //     <>
+  //       <Result1>
+  //         <div> Eine lange Liste von grünen Servern</div>
+  //       </Result1>
+  //     </>
+  //   );
+  // }
+
   return (
     <>
       <Head>
@@ -116,7 +169,12 @@ export default function Home({}) {
                   diese Webseite wird grün gehostet
                 </p>
               ) : (
-                <p>diese Webseite wird nicht grün gehostet</p>
+                <div>
+                  <p>diese Webseite wird nicht grün gehostet</p>
+                  <StyledCheckButton name="checkHosts" type="submit">
+                    zu grün wechseln
+                  </StyledCheckButton>
+                </div>
               )}
             </div>
           ) : null}
