@@ -78,27 +78,7 @@ export default function Home({}) {
       <form onSubmit={handleSubmit}>
         <StyledBackgroundGrid>
           <Area1>
-            <div>Wie grün ist deine Website?</div>{' '}
-            {countryArray ? (
-              <>
-                <InputFieldCountry
-                  countryArray={countryArray}
-                  selectedCountry={selectedCountry}
-                  setSelectedCountry={setSelectedCountry}
-                />
-                <p>
-                  Selected Country:{' '}
-                  <ul style={{ color: 'white' }}>
-                    {countries[selectedCountry]?.providers.map(provider => (
-                      <li key={provider.id}>
-                        <a href={provider.website}>{provider.naam}</a>
-                      </li>
-                    ))}
-                  </ul>
-                  }
-                </p>
-              </>
-            ) : null}
+            <div>Wie grün ist deine Website?</div>
           </Area1>
           <Area2>
             <div>Wenn du es wissen willst, tippe hier deine Url ein:</div>
@@ -112,7 +92,7 @@ export default function Home({}) {
             </div>
           </Area3>
           <Area4>
-            <p>Anhand von Parametern. blablabla</p>
+            <p>Anhand von Parametern.</p>
           </Area4>
           <Area5></Area5>
           <Area6></Area6>
@@ -125,7 +105,7 @@ export default function Home({}) {
           <Area8></Area8>
           <Area9></Area9>
         </StyledBackgroundGrid>
-        <NavBar> Hallo </NavBar>
+        <NavBar>Hallo</NavBar>
       </form>
     );
   }
@@ -138,16 +118,6 @@ export default function Home({}) {
       </>
     );
   }
-
-  // if (data.green === false ?) {
-  //   return (
-  //     <>
-  //       <Result1>
-  //         <div> Eine lange Liste von grünen Servern</div>
-  //       </Result1>
-  //     </>
-  //   );
-  // }
 
   return (
     <>
@@ -169,10 +139,32 @@ export default function Home({}) {
                 </p>
               ) : (
                 <div>
-                  <p>diese Webseite wird nicht grün gehostet</p>
+                  <p>diese Webseite wird nicht grün gehostet.</p>
                   <StyledCheckButton name="checkHosts" type="submit">
                     zu grün wechseln
                   </StyledCheckButton>
+
+                  {countryArray ? (
+                    <>
+                      <InputFieldCountry
+                        countryArray={countryArray}
+                        selectedCountry={selectedCountry}
+                        setSelectedCountry={setSelectedCountry}
+                      />
+                      <p>
+                        Liste der grünen Hosting-Anbieter:
+                        <ul>
+                          {countries[selectedCountry]?.providers.map(
+                            provider => (
+                              <li key={provider.id}>
+                                <a href={provider.website}>{provider.naam}</a>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </p>
+                    </>
+                  ) : null}
                 </div>
               )}
             </div>
@@ -182,9 +174,9 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.cleanerThan > 0.5 ? (
-                <p> zählt zu den 50% der sauberen Websites</p>
+                <p>zählt zu den 50% der sauberen Websites</p>
               ) : (
-                <p>zählt zu den 50% der dreckigen Website</p>
+                <p>zählt zu den 50% der dreckigen Websites.</p>
               )}
             </div>
           ) : null}
@@ -193,7 +185,7 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                beim Laden der Webseite werden {data.bytes.toFixed(2)} Bytes
+                beim Laden der Webseite werden{data.bytes.toFixed(2)}Bytes
                 übertragenen.
               </p>
             </div>
@@ -216,7 +208,7 @@ export default function Home({}) {
               <p>
                 Die Seite verbraucht ungefähr
                 {data.statistics.co2.grid.grams.toFixed(2)}
-                Gramm CO2 bei jedem Ladevorgang
+                Gramm CO2 bei jedem Ladevorgang.
               </p>
             </div>
           ) : null}

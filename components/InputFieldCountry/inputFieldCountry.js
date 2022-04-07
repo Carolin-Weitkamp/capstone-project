@@ -29,11 +29,14 @@ const StyledSelect = styled.select`
   height: 35px;
   margin: 5px 0 5px 0;
   padding: 0px 10px 0px 6px; // in dem Input Feld
-  font-size: 1rem;
+  font-size: 0.5rem;
   border: 0.25vw solid white;
   align-items: center;
   color: white;
   transition: 0.6s;
+  > p {
+    color: white;
+  }
   &:hover {
     background-color: white;
   }
@@ -41,6 +44,7 @@ const StyledSelect = styled.select`
   &:hover {
     color: yellowgreen;
   }
+
   @media screen and (min-width: 700px) {
     width: 400px;
     height: 55px;
