@@ -26,6 +26,7 @@ import {
   Result9,
 } from '../components/Results/Results';
 import { StyledInput } from '../components/InputFieldUrl/InputUrl';
+import InputFieldCountry from '../components/InputFieldCountry/inputFieldCountry';
 import { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
@@ -39,47 +40,15 @@ export default function Home({}) {
     isPaused: () => !url,
   });
 
-  const { data: newData } = useSWR(`/api/greenhosts`);
-  // console.log(newData);
-  const arrayFromObject = newData && Object.entries(newData);
-  const newArrayWithObjects = arrayFromObject?.map(el => {
-    return { ...el[1] };
-  });
-  const filteredArrayForProvidersOnly = newArrayWithObjects?.filter(
-    el => el.providers && el?.providers.length !== 0
-  );
-  console.log(filteredArrayForProvidersOnly);
-  const firstElement =
-    filteredArrayForProvidersOnly &&
-    filteredArrayForProvidersOnly[0].countryname;
-  console.log(firstElement);
+  const { data: countries } = useSWR(`/api/greenhosts`);
 
-  // const firstElement = myArray[0];
-  // console.log(firstElement);
+  console.log(countries);
 
-  // console.log(filteredArrayForProvidersOnly);
-
-  // console.log(JSON.stringify(newData));
-  // console.log(newData);
-  // const myObject = new Object();
-  // myObject.AD = { data: 'Andorra' };
-  // myObject.AF = { data: 'Afghanistan' };
-
-  // console.log('this is my object: ', myObject);
-  // console.log("this is my object's andorra data: ", myObject.AD);
-  // console.log("this is my object's andorra data: ", myObject.AD.data);
-  // console.log("this is my object's afhganistan data: ", myObject.AF);
-  // console.log("this is my object's afhganistan data: ", myObject.AF.data);
-
-  // newData.entries(obj);
-  // newData[0].map(data => {
-  //   console.log(data);
-  // });
-
-  // function handleSubmitHosts(event) {
-  //   event.preventDefault();
-  //   onSubmitHosts(event.target.elements.checkHosts);
-  // }
+  const countryArray =
+    countries &&
+    Object.values(countries).filter(
+      country => country.providers && country.providers.length > 0
+    );
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -94,12 +63,42 @@ export default function Home({}) {
 
   // }
 
+  // function handleChange (onChange) {
+  //   onChange.
+  // }
+
+  // document.querySelector('#choice').onChange = function () {
+  //   let msg = document.querySelector('#choice').value;
+  // };
+
+  const [selectedCountry, setSelectedCountry] = useState();
+
   if (!url) {
     return (
       <form onSubmit={handleSubmit}>
         <StyledBackgroundGrid>
           <Area1>
-            <div>Wie grün ist deine Website?</div>
+            <div>Wie grün ist deine Website?</div>{' '}
+            {countryArray ? (
+              <>
+                <InputFieldCountry
+                  countryArray={countryArray}
+                  selectedCountry={selectedCountry}
+                  setSelectedCountry={setSelectedCountry}
+                />
+                <p>
+                  Selected Country:{' '}
+                  <ul style={{ color: 'white' }}>
+                    {countries[selectedCountry]?.providers.map(provider => (
+                      <li key={provider.id}>
+                        <a href={provider.website}>{provider.naam}</a>
+                      </li>
+                    ))}
+                  </ul>
+                  }
+                </p>
+              </>
+            ) : null}
           </Area1>
           <Area2>
             <div>Wenn du es wissen willst, tippe hier deine Url ein:</div>
