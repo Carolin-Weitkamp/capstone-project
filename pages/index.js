@@ -31,6 +31,7 @@ import { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import NavBar from '../components/NavBar/NavBar';
+import Load from '../components/Loading/Load';
 import LoadingSide from '../components/LoadingSide/LoadingSide';
 
 export default function Home({}) {
