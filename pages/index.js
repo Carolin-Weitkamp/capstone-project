@@ -30,6 +30,7 @@ import InputFieldCountry from '../components/InputFieldCountry/inputFieldCountry
 import { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
+import CheckGreenButton from '../components/CheckButton/CheckGreenButton';
 import NavBar from '../components/NavBar/NavBar';
 import Load from '../components/Loading/Load';
 import LoadingSide from '../components/LoadingSide/LoadingSide';
@@ -116,6 +117,8 @@ export default function Home({}) {
         ></link>
       </Head>
 
+      {/* name="checkHosts" type="submit" */}
+
       <Results>
         <Result1>
           {data ? (
@@ -127,9 +130,7 @@ export default function Home({}) {
               ) : (
                 <div>
                   <p>diese Webseite wird nicht grün gehostet.</p>
-                  <StyledCheckButton name="checkHosts" type="submit">
-                    zu grün wechseln
-                  </StyledCheckButton>
+                  <StyledCheckButton>zu grün wechseln</StyledCheckButton>
 
                   {countryArray ? (
                     <>

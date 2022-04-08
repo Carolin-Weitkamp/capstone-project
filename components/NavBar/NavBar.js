@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export { NavBar };
 
-function NavBar() {
+export default function NavBar() {
   return (
     <NavBarStyle>
       {/* <Link href="/" passHref></Link> */}
@@ -10,7 +10,6 @@ function NavBar() {
     </NavBarStyle>
   );
 }
-export default NavBar;
 
 const NavBarStyle = styled.div`
   position: fixed;

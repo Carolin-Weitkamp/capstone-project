@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export { LoadingSide };
 
-function LoadingSide() {
+export default function LoadingSide() {
   return (
     <Loading>
       <Loading1>
@@ -20,8 +20,6 @@ function LoadingSide() {
     </Loading>
   );
 }
-
-export default LoadingSide;
 
 const Loading = styled.div`
   background-color: black;
