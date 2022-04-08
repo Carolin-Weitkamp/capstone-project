@@ -43,7 +43,6 @@ export default function Home({}) {
 
   const { data: countries } = useSWR(`/api/greenhosts`);
 
-  console.log(countries);
 
   const countryArray =
     countries &&
