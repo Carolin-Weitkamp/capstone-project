@@ -64,13 +64,6 @@ export default function Home({}) {
 
   // }
 
-  // function handleChange (onChange) {
-  //   onChange.
-  // }
-
-  // document.querySelector('#choice').onChange = function () {
-  //   let msg = document.querySelector('#choice').value;
-  // };
 
   const [selectedCountry, setSelectedCountry] = useState();
 
