@@ -12,7 +12,7 @@ function InputFieldCountry({
 
   return (
     <StyledSelect value={selectedCountry} onChange={handleChange}>
-      <option value="">choose your country</option>
+      <option value="">Wähle dein Land</option>
       {countryArray.map(country => (
         <option key={country.iso} value={country.iso}>
           {country.countryname}

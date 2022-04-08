@@ -15,6 +15,9 @@ export default function GreenHosts() {
   return (
     <Hosts>
       <Hosts1>
+        <p>Such hier nach einem grünen Hosting-Anbieter:</p>
+      </Hosts1>
+      <Hosts2>
         {countryArray ? (
           <>
             <InputFieldCountry
@@ -34,9 +37,6 @@ export default function GreenHosts() {
             </p>
           </>
         ) : null}
-      </Hosts1>
-      <Hosts2>
-        <div>Liste der grünen Hosting Anbieter in ausgewähltem Land:</div>
       </Hosts2>
       <Hosts3></Hosts3>
       <Hosts4></Hosts4>
@@ -66,7 +66,7 @@ const Hosts1 = styled.div`
   border-right: 0.35vw solid white;
   text-align: bottom;
   font-weight: medium;
-  > div {
+  > p {
     font-weight: medium;
     color: white;
     padding: 30px 30px 30px 30px;
@@ -94,11 +94,11 @@ const Hosts2 = styled.div`
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;
   text-align: left;
-  > div {
+  > p {
     font-weight: medium;
     padding: 15px 30px 15px 30px;
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
   }
   @media screen and (min-width: 700px) {
     > div {
