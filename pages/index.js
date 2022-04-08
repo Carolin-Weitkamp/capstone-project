@@ -43,7 +43,6 @@ export default function Home({}) {
 
   const { data: countries } = useSWR(`/api/greenhosts`);
 
-
   const countryArray =
     countries &&
     Object.values(countries).filter(
@@ -58,11 +57,6 @@ export default function Home({}) {
       query: { url: newUrl }, // und das ist die url die eingegeben wird
     });
   }
-
-  // const handleClick = () => {
-
-  // }
-
 
   const [selectedCountry, setSelectedCountry] = useState();
 
@@ -213,10 +207,3 @@ export default function Home({}) {
     </>
   );
 }
-
-// const fetcher = (...args) => fetch(...args).then(res => res.json());
-// const { data: newData } = useSWR(
-//   `https://admin.thegreenwebfoundation.org/data/directory/`,
-//   fetcher
-// );
-// console.log(newData, 'new Data');
