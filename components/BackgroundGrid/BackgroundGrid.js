@@ -28,6 +28,9 @@ const Area1 = styled.div`
   border-right: 0.35vw solid white;
   text-align: bottom;
   font-weight: medium;
+  > p {
+    color: white;
+  }
   > div {
     font-weight: medium;
     color: white;

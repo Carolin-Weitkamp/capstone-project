@@ -26,10 +26,12 @@ import {
   Result9,
 } from '../components/Results/Results';
 import { StyledInput } from '../components/InputFieldUrl/InputUrl';
+import InputFieldCountry from '../components/InputFieldCountry/inputFieldCountry';
 import { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import NavBar from '../components/NavBar/NavBar';
+import Load from '../components/Loading/Load';
 import LoadingSide from '../components/LoadingSide/LoadingSide';
 
 export default function Home({}) {
@@ -39,47 +41,14 @@ export default function Home({}) {
     isPaused: () => !url,
   });
 
-  const { data: newData } = useSWR(`/api/greenhosts`);
-  // console.log(newData);
-  const arrayFromObject = newData && Object.entries(newData);
-  const newArrayWithObjects = arrayFromObject?.map(el => {
-    return { ...el[1] };
-  });
-  const filteredArrayForProvidersOnly = newArrayWithObjects?.filter(
-    el => el.providers && el?.providers.length !== 0
-  );
-  console.log(filteredArrayForProvidersOnly);
-  const firstElement =
-    filteredArrayForProvidersOnly &&
-    filteredArrayForProvidersOnly[0].countryname;
-  console.log(firstElement);
+  const { data: countries } = useSWR(`/api/greenhosts`);
 
-  // const firstElement = myArray[0];
-  // console.log(firstElement);
 
-  // console.log(filteredArrayForProvidersOnly);
-
-  // console.log(JSON.stringify(newData));
-  // console.log(newData);
-  // const myObject = new Object();
-  // myObject.AD = { data: 'Andorra' };
-  // myObject.AF = { data: 'Afghanistan' };
-
-  // console.log('this is my object: ', myObject);
-  // console.log("this is my object's andorra data: ", myObject.AD);
-  // console.log("this is my object's andorra data: ", myObject.AD.data);
-  // console.log("this is my object's afhganistan data: ", myObject.AF);
-  // console.log("this is my object's afhganistan data: ", myObject.AF.data);
-
-  // newData.entries(obj);
-  // newData[0].map(data => {
-  //   console.log(data);
-  // });
-
-  // function handleSubmitHosts(event) {
-  //   event.preventDefault();
-  //   onSubmitHosts(event.target.elements.checkHosts);
-  // }
+  const countryArray =
+    countries &&
+    Object.values(countries).filter(
+      country => country.providers && country.providers.length > 0
+    );
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -93,6 +62,9 @@ export default function Home({}) {
   // const handleClick = () => {
 
   // }
+
+
+  const [selectedCountry, setSelectedCountry] = useState();
 
   if (!url) {
     return (
@@ -113,7 +85,7 @@ export default function Home({}) {
             </div>
           </Area3>
           <Area4>
-            <p>Anhand von Parametern. blablabla</p>
+            <p>Anhand von Parametern.</p>
           </Area4>
           <Area5></Area5>
           <Area6></Area6>
@@ -126,7 +98,7 @@ export default function Home({}) {
           <Area8></Area8>
           <Area9></Area9>
         </StyledBackgroundGrid>
-        <NavBar> Hallo </NavBar>
+        <NavBar>Hallo</NavBar>
       </form>
     );
   }
@@ -139,16 +111,6 @@ export default function Home({}) {
       </>
     );
   }
-
-  // if (data.green === false ?) {
-  //   return (
-  //     <>
-  //       <Result1>
-  //         <div> Eine lange Liste von grünen Servern</div>
-  //       </Result1>
-  //     </>
-  //   );
-  // }
 
   return (
     <>
@@ -170,10 +132,32 @@ export default function Home({}) {
                 </p>
               ) : (
                 <div>
-                  <p>diese Webseite wird nicht grün gehostet</p>
+                  <p>diese Webseite wird nicht grün gehostet.</p>
                   <StyledCheckButton name="checkHosts" type="submit">
                     zu grün wechseln
                   </StyledCheckButton>
+
+                  {countryArray ? (
+                    <>
+                      <InputFieldCountry
+                        countryArray={countryArray}
+                        selectedCountry={selectedCountry}
+                        setSelectedCountry={setSelectedCountry}
+                      />
+                      <p>
+                        Liste der grünen Hosting-Anbieter:
+                        <ul>
+                          {countries[selectedCountry]?.providers.map(
+                            provider => (
+                              <li key={provider.id}>
+                                <a href={provider.website}>{provider.naam}</a>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </p>
+                    </>
+                  ) : null}
                 </div>
               )}
             </div>
@@ -183,9 +167,9 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.cleanerThan > 0.5 ? (
-                <p> zählt zu den 50% der sauberen Websites</p>
+                <p>zählt zu den 50% der sauberen Websites</p>
               ) : (
-                <p>zählt zu den 50% der dreckigen Website</p>
+                <p>zählt zu den 50% der dreckigen Websites.</p>
               )}
             </div>
           ) : null}
@@ -194,7 +178,7 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                beim Laden der Webseite werden {data.bytes.toFixed(2)} Bytes
+                beim Laden der Webseite werden{data.bytes.toFixed(2)}Bytes
                 übertragenen.
               </p>
             </div>
@@ -217,7 +201,7 @@ export default function Home({}) {
               <p>
                 Die Seite verbraucht ungefähr
                 {data.statistics.co2.grid.grams.toFixed(2)}
-                Gramm CO2 bei jedem Ladevorgang
+                Gramm CO2 bei jedem Ladevorgang.
               </p>
             </div>
           ) : null}
