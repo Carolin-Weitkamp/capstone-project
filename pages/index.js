@@ -34,6 +34,8 @@ import CheckGreenButton from '../components/CheckButton/CheckGreenButton';
 import NavBar from '../components/NavBar/NavBar';
 import Load from '../components/Loading/Load';
 import LoadingSide from '../components/LoadingSide/LoadingSide';
+import GreenHosts from './green-hosts';
+import Link from 'next/link';
 
 export default function Home({}) {
   const router = useRouter();
@@ -41,14 +43,6 @@ export default function Home({}) {
   const { data } = useSWR(`/api/carbon?url=${encodeURIComponent(url)}`, {
     isPaused: () => !url,
   });
-
-  const { data: countries } = useSWR(`/api/greenhosts`);
-
-  const countryArray =
-    countries &&
-    Object.values(countries).filter(
-      country => country.providers && country.providers.length > 0
-    );
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -58,8 +52,6 @@ export default function Home({}) {
       query: { url: newUrl }, // und das ist die url die eingegeben wird
     });
   }
-
-  const [selectedCountry, setSelectedCountry] = useState();
 
   if (!url) {
     return (
@@ -130,29 +122,9 @@ export default function Home({}) {
               ) : (
                 <div>
                   <p>diese Webseite wird nicht grün gehostet.</p>
-                  <StyledCheckButton>zu grün wechseln</StyledCheckButton>
-
-                  {countryArray ? (
-                    <>
-                      <InputFieldCountry
-                        countryArray={countryArray}
-                        selectedCountry={selectedCountry}
-                        setSelectedCountry={setSelectedCountry}
-                      />
-                      <p>
-                        Liste der grünen Hosting-Anbieter:
-                        <ul>
-                          {countries[selectedCountry]?.providers.map(
-                            provider => (
-                              <li key={provider.id}>
-                                <a href={provider.website}>{provider.naam}</a>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </p>
-                    </>
-                  ) : null}
+                  <Link href="/green-hosts" passHref>
+                    <StyledCheckButton>zu grün wechseln</StyledCheckButton>
+                  </Link>
                 </div>
               )}
             </div>
