@@ -6,7 +6,6 @@ export default function NavBar() {
     <NavBarStyle>
       {/* <Link href="/" passHref></Link> */}
       <p>Home</p>
-      <p>Test</p>
     </NavBarStyle>
   );
 }
