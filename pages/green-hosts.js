@@ -26,7 +26,7 @@ export default function GreenHosts() {
               setSelectedCountry={setSelectedCountry}
             />
             <p>
-              Liste der grünen Hosting-Anbieter:
+              Liste der grünen <br></br> Hosting-Anbieter:
               <ul>
                 {countries[selectedCountry]?.providers.map(provider => (
                   <li key={provider.id}>
@@ -38,13 +38,15 @@ export default function GreenHosts() {
           </>
         ) : null}
       </Hosts2>
-      <Hosts3></Hosts3>
-      <Hosts4></Hosts4>
-      <Hosts5></Hosts5>
-      <Hosts6></Hosts6>
-      <Hosts7></Hosts7>
-      <Hosts8></Hosts8>
-      <Hosts9></Hosts9>
+      <Hosts3>{/* <p>hallo 3</p> */}</Hosts3>
+      <Hosts4>{/* <p>hallo 4</p> */}</Hosts4>
+      <Hosts6>{/* <p>hallo 6</p> */}</Hosts6>
+      <Hosts8>{/* <p>hallo 8</p> */}</Hosts8>
+      <Hosts5>
+        <p>Erhebt keinen Anspruch auf Vollständigkeit.</p>
+      </Hosts5>
+      <Hosts7>{/* <p>hallo 7</p> */}</Hosts7>
+      <Hosts9>{/* <p>hallo 9</p> */}</Hosts9>
     </Hosts>
   );
 }
@@ -70,114 +72,102 @@ const Hosts1 = styled.div`
     font-weight: medium;
     color: white;
     padding: 30px 30px 30px 30px;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     transition: 1s;
-  }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding: 50px 50px 100px 50px;
-      font-size: 4rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 8rem;
-    }
   }
 `;
 
 const Hosts2 = styled.div`
-  grid-column: col-start / span 4;
+  grid-column: col-start / span 5;
   grid-row: 5;
   height: 15vh;
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;
+  /* border-right: 0.35vw solid white; */
+  /* border-bottom: 0.35vw solid white; */
   text-align: left;
   > p {
     font-weight: medium;
     padding: 15px 30px 15px 30px;
     color: white;
-    font-size: 2rem;
-  }
-  > li {
-    list-style: none;
-    color: white;
-  }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding: 50px 50px 25px 50px;
-      font-size: 1.5rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 3rem;
-    }
+    font-size: 0.8rem;
   }
 `;
 
 const Hosts3 = styled.div`
-  grid-column: col-start / span 4;
+  grid-column: col-start / span 5;
   grid-row: 6;
   height: 17.5vh;
   border-left: 0.35vw solid white;
   /* border-top: 0.35vw solid white; */
 
-  > div {
-    font-weight: medium;
-    padding: 15px 30px 15px 30px;
-    color: white;
-    font-size: 1.2rem;
-  }
-  /* @media screen and (min-width: 700px) {
-    > div {
-      padding-left: 50px;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 0px 0px 0px 50px;
-    }
-  } */
-`;
-
-const Hosts4 = styled.div`
-  grid-column: col-start / span 4;
-  grid-row: 7;
-  height: 17.5vh;
-  border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
-  border-bottom: 0.35vw solid white;
-  > div {
+  > p {
     font-weight: medium;
     padding: 15px 30px 15px 30px;
     color: white;
     font-size: 1rem;
   }
-  /* @media screen and (min-width: 700px) {
-    > div {
-      padding: 25px 50px 25px 50px;
-      font-size: 1rem;
-    }
+`;
+
+const Hosts4 = styled.div`
+  grid-column: col-start / span 5;
+  grid-row: 7;
+  height: 17.5vh;
+  border-left: 0.35vw solid white;
+  /* border-top: 0.35vw solid white; */
+  border-bottom: 0.35vw solid white;
+  > p {
+    font-weight: medium;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    font-size: 1rem;
   }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 2rem;
-    }
-  } */
 `;
 
 const Hosts5 = styled.div`
-  grid-column: col-start 5 / span 1;
-  grid-row: 5 / 8;
+  margin-bottom: 58px;
+  height: 25vh;
+  grid-column: col-start / span 4;
+  grid-row: 8 / 14;
+  font-size: 1rem;
+  font-weight: medium;
   border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
+  color: white;
+  > p {
+    font-weight: medium;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    font-size: 0.5rem;
+  }
 `;
 
 const Hosts6 = styled.div`
+  grid-column: col-start 5 / span 1;
+  grid-row: 5 / 8;
+  /* border-left: 0.35vw solid white; */
+  border-top: 0.35vw solid white;
+  > p {
+    font-weight: medium;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    font-size: 1rem;
+  }
+`;
+const Hosts7 = styled.div`
+  grid-column: col-start 5 / span 1;
+  grid-row: 8 / 14;
+  border-left: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
+  > p {
+    font-weight: medium;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    font-size: 1rem;
+  }
+`;
+
+const Hosts8 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 5 / 8;
   border-right: 0.35vw solid white;
@@ -185,47 +175,15 @@ const Hosts6 = styled.div`
   border-top: 0.35vw solid white;
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 212, 255, 0) 0%,
-    rgba(158, 51, 198, 0.7581233176864496) 100%
+    rgba(80, 16, 85, 0) 0%,
+    rgba(93, 172, 15, 0.5928572112438726) 100%
   );
-`;
-
-const Hosts7 = styled.div`
-  margin-bottom: 58px;
-  height: 25vh;
-  grid-column: col-start / span 4;
-  grid-row: 8 / 14;
-  font-size: 3.4rem;
-  font-weight: medium;
-  border-left: 0.35vw solid white;
-  border-bottom: 0.35vw solid white;
-  color: white;
-  /* > div {
+  > p {
     font-weight: medium;
     padding: 15px 30px 15px 30px;
     color: white;
     font-size: 1rem;
   }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding: 50px 50px 100px 50px;
-      font-size: 2rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 6rem;
-    }
-  } */
-`;
-
-const Hosts8 = styled.div`
-  grid-column: col-start 5 / span 1;
-  grid-row: 8 / 14;
-  border-left: 0.35vw solid white;
-  border-bottom: 0.35vw solid white;
 `;
 
 const Hosts9 = styled.div`
@@ -236,8 +194,7 @@ const Hosts9 = styled.div`
   border-bottom: 0.35vw solid white;
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 212, 255, 0) 0%,
-    rgba(158, 51, 198, 0.7581233176864496) 100%
+    rgba(80, 16, 85, 0) 0%,
+    rgba(93, 172, 15, 0.5928572112438726) 100%
   );
 `;

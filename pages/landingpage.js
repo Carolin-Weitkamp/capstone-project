@@ -11,15 +11,17 @@ export default function Landingpage() {
   return (
     <Landing>
       <Landing1>
-        <p>Wie ist der CO2-Fuabdruck deiner Website?</p>
+        <p>Wie ist der CO2-Fußbdruck deiner Website?</p>
       </Landing1>
       <Landing2>
-        <StyledCalculatorButton>Zum Rechner</StyledCalculatorButton>
+        <Link href="/" passHref>
+          <StyledCalculatorButton>Zum Rechner</StyledCalculatorButton>
+        </Link>
         <p>Ein Tool das deine Website untersucht...</p>
       </Landing2>
       <Landing3>
         <Link href="/green-hosts" passHref>
-          <StyledGreenHostsButton>Grüne Hosts</StyledGreenHostsButton>
+          <StyledGreenHostsButton>Grünes Hosting</StyledGreenHostsButton>
         </Link>
         <p>Hier findest du eine Liste grüner Hosting-Anbieter.</p>
       </Landing3>
@@ -74,7 +76,7 @@ const Landing2 = styled.div`
     font-weight: medium;
     padding: 0px 30px 30px 30px;
     color: white;
-    font-size: 0.25rem;
+    font-size: 0.3rem;
   }
 `;
 
@@ -89,7 +91,7 @@ const Landing3 = styled.div`
     font-weight: medium;
     padding: 0px 30px 35px 30px;
     color: white;
-    font-size: 0.25rem;
+    font-size: 0.3rem;
   }
 `;
 
