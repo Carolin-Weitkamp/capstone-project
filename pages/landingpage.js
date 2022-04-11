@@ -11,7 +11,7 @@ export default function Landingpage() {
   return (
     <Landing>
       <Landing1>
-        <p>Wie ist der CO2-Fußbdruck deiner Website?</p>
+        <p>Wie ist der CO2-Fußabdruck deiner Website?</p>
       </Landing1>
       <Landing2>
         <Link href="/" passHref>
