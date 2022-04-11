@@ -27,8 +27,8 @@ const StyledSelect = styled.select`
   background: green;
   width: 200px;
   height: 35px;
-  margin: 5px 0 5px 0;
-  padding: 0px 10px 0px 6px; // in dem Input Feld
+  margin: 5px 0px 5px 0;
+  padding: 0px 20px 0px 6px; // in dem Input Feld
   font-size: 0.5rem;
   border: 0.25vw solid white;
   align-items: center;
@@ -37,6 +37,10 @@ const StyledSelect = styled.select`
   > p {
     color: white;
   }
+  > li {
+    color: white;
+  }
+
   &:hover {
     background-color: white;
   }

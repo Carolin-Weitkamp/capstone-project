@@ -100,6 +100,10 @@ const Hosts2 = styled.div`
     color: white;
     font-size: 2rem;
   }
+  > li {
+    list-style: none;
+    color: white;
+  }
   @media screen and (min-width: 700px) {
     > div {
       padding: 50px 50px 25px 50px;
