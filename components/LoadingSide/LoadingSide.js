@@ -10,13 +10,13 @@ export default function LoadingSide() {
       <Loading2>
         <div>Manchmal kann dies ein paar Sekunden länger dauern.</div>
       </Loading2>
-      <Loading3></Loading3>
-      <Loading4></Loading4>
-      <Loading5></Loading5>
-      <Loading6></Loading6>
-      <Loading7></Loading7>
-      <Loading8></Loading8>
-      <Loading9></Loading9>
+      <Loading3 />
+      <Loading4 />
+      <Loading5 />
+      <Loading6 />
+      <Loading7 />
+      <Loading8 />
+      <Loading9 />
     </Loading>
   );
 }
