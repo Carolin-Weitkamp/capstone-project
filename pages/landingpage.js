@@ -4,38 +4,35 @@ import Link from 'next/link';
 import footprint from '/public/pictures/footprint.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
+import NavBar from '../components/NavBar/NavBar';
+import GreenHosts from './green-hosts';
 
 export default function Landingpage() {
   return (
     <Landing>
       <Landing1>
-        <p>dein digitaler Fußabdruck bereich 1</p>
+        <p>Wie ist der CO2-Fuabdruck deiner Website?</p>
       </Landing1>
       <Landing2>
-        <StyledCalculatorButton>zum Rechner</StyledCalculatorButton>
+        <StyledCalculatorButton>Zum Rechner</StyledCalculatorButton>
+        <p>Ein Tool das deine Website untersucht...</p>
       </Landing2>
       <Landing3>
-        <StyledGreenHostsButton>Grüne Hosting Anbieter</StyledGreenHostsButton>
+        <Link href="/green-hosts" passHref>
+          <StyledGreenHostsButton>Grüne Hosts</StyledGreenHostsButton>
+        </Link>
+        <p>Hier findest du eine Liste grüner Hosting-Anbieter.</p>
       </Landing3>
       <Landing4>
         <PictureStyle>
           <Image src={footprint} />
         </PictureStyle>
       </Landing4>
-      {/* <Landing5>
-        <p>Ist das ist 5</p>
-      </Landing5> */}
-      <Landing6>
-        <p>das ist 6</p>
-      </Landing6>
-      <Landing7>
-        <p>das 7</p>
-      </Landing7>
-      <Landing8>
-        <p>das ist 8</p>
-      </Landing8>
-
+      <Landing6 />
+      <Landing7 />
+      <Landing8 />
       <Landing9 />
+      <NavBar></NavBar>
     </Landing>
   );
 }
@@ -61,46 +58,44 @@ const Landing1 = styled.div`
     font-weight: medium;
     color: white;
     padding: 30px 30px 30px 30px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: 1s;
   }
 `;
 
 const Landing2 = styled.div`
   grid-column: col-start / span 4;
-  grid-row: 5;
+  grid-row: 6 / 7;
   height: 10vh;
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;
   text-align: left;
-  background-color: lightcoral;
   > p {
     font-weight: medium;
-    padding: 15px 30px 15px 30px;
+    padding: 0px 30px 30px 30px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.25rem;
   }
 `;
 
 const Landing3 = styled.div`
   grid-column: col-start / span 4;
-  grid-row: 6;
+  grid-row: 8 / 9;
   height: 10vh;
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;
-  background-color: pink;
 
   > p {
     font-weight: medium;
-    padding: 15px 30px 15px 30px;
+    padding: 0px 30px 35px 30px;
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.25rem;
   }
 `;
 
 const Landing4 = styled.div`
   grid-column: col-start / span 4;
-  grid-row: 7 / 14;
+  grid-row: 10 / 14;
   height: 50vh;
   border-left: 0.35vw solid white;
   border-top: 0.35vw solid white;

@@ -11,6 +11,7 @@ const StyledGreenHostsButton = styled.button`
   font-size: 1rem;
   border: 0.25vw solid white;
   padding: 5px 20px 5px 20px;
+  margin: 15px 0 0px 30px;
   align-self: center;
   color: white;
   transition: 0.6s;
