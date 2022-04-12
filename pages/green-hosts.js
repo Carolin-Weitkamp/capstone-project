@@ -48,7 +48,6 @@ export default function GreenHosts() {
       </Hosts5>
       <Hosts7>{/* <p>hallo 7</p> */}</Hosts7>
       <Hosts9>{/* <p>hallo 9</p> */}</Hosts9>
-      <NavBar></NavBar>
     </Hosts>
   );
 }

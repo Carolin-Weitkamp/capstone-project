@@ -6,10 +6,10 @@ export { NavBar };
 export default function NavBar() {
   return (
     <NavBarStyle>
-      <Link href="/landingpage" passHref>
+      <Link href="/" passHref>
         <p>Home</p>
       </Link>
-      <Link href="/" passHref>
+      <Link href="/calculator" passHref>
         <p>Rechner</p>
       </Link>
       <Link href="/green-hosts" passHref>
@@ -31,6 +31,7 @@ const NavBarStyle = styled.div`
   bottom: 0px;
   right: 0;
   background: white;
+  cursor: pointer;
   & :hover {
     color: pink;
   }

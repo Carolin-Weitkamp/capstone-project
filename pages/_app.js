@@ -1,5 +1,6 @@
 import { SWRConfig } from 'swr';
 import { GlobalStyle } from '../components/GlobalStyle';
+import NavBar from '../components/NavBar/NavBar';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
       >
         <GlobalStyle />
         <Component {...pageProps} />
+        <NavBar></NavBar>
       </SWRConfig>
     </>
   );
