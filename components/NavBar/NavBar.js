@@ -1,11 +1,20 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+
 export { NavBar };
 
 export default function NavBar() {
   return (
     <NavBarStyle>
-      {/* <Link href="/" passHref></Link> */}
-      <p>Home</p>
+      <Link href="/landingpage" passHref>
+        <p>Home</p>
+      </Link>
+      <Link href="/" passHref>
+        <p>Rechner</p>
+      </Link>
+      <Link href="/green-hosts" passHref>
+        <p>Grünes Hosting</p>
+      </Link>
     </NavBarStyle>
   );
 }
@@ -22,12 +31,16 @@ const NavBarStyle = styled.div`
   bottom: 0px;
   right: 0;
   background: white;
+  & :hover {
+    color: pink;
+  }
   > p {
     font-weight: medium;
     display: flex;
     color: black;
     padding-left: 30px;
-    font-size: 15px;
+    font-size: 0.7rem;
+    transition: 0, 2s;
 
     /* &:active {
       color-scheme: pink;

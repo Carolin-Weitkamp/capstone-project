@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import useSWR from 'swr';
 import { useState } from 'react';
 import InputFieldCountry from '../components/InputFieldCountry/inputFieldCountry';
+import NavBar from '../components/NavBar/NavBar';
 
 export default function GreenHosts() {
   const { data: countries } = useSWR(`/api/greenhosts`);
@@ -47,6 +48,7 @@ export default function GreenHosts() {
       </Hosts5>
       <Hosts7>{/* <p>hallo 7</p> */}</Hosts7>
       <Hosts9>{/* <p>hallo 9</p> */}</Hosts9>
+      <NavBar></NavBar>
     </Hosts>
   );
 }
