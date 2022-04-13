@@ -22,6 +22,7 @@ const StyledCheckGreenButton = styled.button`
   align-self: center;
   color: white;
   transition: 0.6s;
+  cursor: pointer;
   &:hover {
     background-color: white;
   }

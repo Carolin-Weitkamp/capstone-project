@@ -1,182 +1,180 @@
-import Head from 'next/head';
 import styled from 'styled-components';
-import { StyledCheckButton } from '../components/CheckButton/CheckButton';
-import {
-  StyledBackgroundGrid,
-  Area1,
-  Area2,
-  Area3,
-  Area4,
-  Area5,
-  Area6,
-  Area7,
-  Area8,
-  Area9,
-} from '../components/BackgroundGrid/BackgroundGrid';
-import {
-  Results,
-  Result1,
-  Result2,
-  Result3,
-  Result4,
-  Result5,
-  Result6,
-  Result7,
-  Result8,
-  Result9,
-} from '../components/Results/Results';
-import { StyledInput } from '../components/InputFieldUrl/InputUrl';
-import InputFieldCountry from '../components/InputFieldCountry/inputFieldCountry';
-import { useState } from 'react';
-import useSWR from 'swr';
-import { useRouter } from 'next/router';
-import CheckGreenButton from '../components/CheckButton/CheckGreenButton';
-import NavBar from '../components/NavBar/NavBar';
-import Load from '../components/Loading/Load';
-import LoadingSide from '../components/LoadingSide/LoadingSide';
-import GreenHosts from './green-hosts';
+import Image from 'next/image';
 import Link from 'next/link';
+import footprint from '/public/pictures/footprint.svg';
+import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
+import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
+import GreenHosts from './green-hosts';
 
-export default function Home({}) {
-  const router = useRouter();
-  const url = router.query.url; // url? if not url
-  const { data } = useSWR(`/api/carbon?url=${encodeURIComponent(url)}`, {
-    isPaused: () => !url,
-  });
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const newUrl = event.target.elements.urlInput.value;
-    router.push({
-      pathname: router.pathname, // auf diese Pfad wird weitergeleitet
-      query: { url: newUrl }, // und das ist die url die eingegeben wird
-    });
-  }
-
-  if (!url) {
-    return (
-      <form onSubmit={handleSubmit}>
-        <StyledBackgroundGrid>
-          <Area1>
-            <div>Wie grün ist deine Website?</div>
-          </Area1>
-          <Area2>
-            <div>Wenn du es wissen willst, tippe hier deine Url ein:</div>
-          </Area2>
-          <Area3>
-            <div>
-              <StyledInput name="urlInput" type="text" required></StyledInput>
-            </div>
-            <div>
-              <StyledCheckButton type="submit">CHECK</StyledCheckButton>
-            </div>
-          </Area3>
-          <Area4>
-            <p>Anhand von Parametern.</p>
-          </Area4>
-          <Area5></Area5>
-          <Area6></Area6>
-          <Area7>
-            <p>
-              Dieses Tool gibt dir einen Überblick wie umweltfreundlich deine
-              Website ist.
-            </p>
-          </Area7>
-          <Area8></Area8>
-          <Area9></Area9>
-        </StyledBackgroundGrid>
-        <NavBar>Hallo</NavBar>
-      </form>
-    );
-  }
-
-  if (!data) {
-    return (
-      <>
-        <LoadingSide></LoadingSide>
-        <NavBar></NavBar>;
-      </>
-    );
-  }
-
+export default function Landingpage() {
   return (
-    <>
-      <Head>
-        <title>Carbon Footprint</title>
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌏</text></svg>"
-        ></link>
-      </Head>
-
-      {/* name="checkHosts" type="submit" */}
-
-      <Results>
-        <Result1>
-          {data ? (
-            <div>
-              {data.green === true ? (
-                <p style={{ color: 'green' }}>
-                  diese Webseite wird grün gehostet
-                </p>
-              ) : (
-                <div>
-                  <p>diese Webseite wird nicht grün gehostet.</p>
-                  <Link href="/green-hosts" passHref>
-                    <StyledCheckButton>zu grün wechseln</StyledCheckButton>
-                  </Link>
-                </div>
-              )}
-            </div>
-          ) : null}
-        </Result1>
-        <Result2>
-          {data ? (
-            <div>
-              {data.cleanerThan > 0.5 ? (
-                <p>zählt zu den 50% der sauberen Websites</p>
-              ) : (
-                <p>zählt zu den 50% der dreckigen Websites.</p>
-              )}
-            </div>
-          ) : null}
-        </Result2>
-        <Result3>
-          {data ? (
-            <div>
-              <p>
-                beim Laden der Webseite werden{data.bytes.toFixed(2)}Bytes
-                übertragenen.
-              </p>
-            </div>
-          ) : null}
-        </Result3>
-        <Result4>
-          {data ? (
-            <div>
-              <p>
-                Verbrauchte Liter: {data.statistics.co2.grid.litres.toFixed(3)}
-              </p>
-            </div>
-          ) : null}
-        </Result4>
-        <Result5></Result5>
-        <Result6></Result6>
-        <Result7>
-          {data ? (
-            <div>
-              <p>
-                Die Seite verbraucht ungefähr
-                {data.statistics.co2.grid.grams.toFixed(2)}
-                Gramm CO2 bei jedem Ladevorgang.
-              </p>
-            </div>
-          ) : null}
-        </Result7>
-        <Result8></Result8>
-        <Result9></Result9>
-      </Results>
-      <NavBar></NavBar>
-    </>
+    <Landing>
+      <Landing1>
+        <p>Wie ist der CO2-Fußabdruck deiner Website?</p>
+      </Landing1>
+      <Landing2>
+        <Link href="/calculator" passHref>
+          <StyledCalculatorButton>Zum Rechner</StyledCalculatorButton>
+        </Link>
+        <p>Ein Tool das deine Website untersucht...</p>
+      </Landing2>
+      <Landing3>
+        <Link href="/green-hosts" passHref>
+          <StyledGreenHostsButton>Grünes Hosting</StyledGreenHostsButton>
+        </Link>
+        <p>Hier findest du eine Liste grüner Hosting-Anbieter.</p>
+      </Landing3>
+      <Landing4>
+        <PictureStyle>
+          <Image src={footprint} />
+        </PictureStyle>
+      </Landing4>
+      <Landing6 />
+      <Landing7 />
+      <Landing8 />
+      <Landing9 />
+    </Landing>
   );
 }
+
+const Landing = styled.div`
+  background-color: black;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(6, [col-start] 1fr);
+  grid-template-rows: repeat(14, [col-start]);
+`;
+
+const Landing1 = styled.div`
+  grid-column: col-start / span 6;
+  grid-row: 1 / 5;
+  height: 25vh;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+  border-right: 0.35vw solid white;
+  text-align: bottom;
+  font-weight: medium;
+  > p {
+    font-weight: medium;
+    color: white;
+    padding: 30px 30px 30px 30px;
+    font-size: 1.5rem;
+    transition: 1s;
+  }
+`;
+
+const Landing2 = styled.div`
+  grid-column: col-start / span 4;
+  grid-row: 6 / 7;
+  height: 10vh;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+  text-align: left;
+  > p {
+    font-weight: medium;
+    padding: 0px 30px 30px 30px;
+    color: white;
+    font-size: 0.3rem;
+  }
+`;
+
+const Landing3 = styled.div`
+  grid-column: col-start / span 4;
+  grid-row: 8 / 9;
+  height: 10vh;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+
+  > p {
+    font-weight: medium;
+    padding: 0px 30px 35px 30px;
+    color: white;
+    font-size: 0.3rem;
+  }
+`;
+
+const Landing4 = styled.div`
+  grid-column: col-start / span 4;
+  grid-row: 10 / 14;
+  height: 50vh;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
+  > p {
+    font-weight: medium;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    font-size: 1rem;
+  }
+`;
+// const Landing5 = styled.div`
+//   margin-bottom: 58px;
+//   height: 25vh;
+//   grid-column: col-start / span 4;
+//   grid-row: 8 / 14;
+//   font-weight: medium;
+//   border-left: 0.35vw solid white;
+//   border-bottom: 0.35vw solid white;
+//   border-top: 0.35vw solid white;
+//   color: white;
+//   > p {
+//     font-weight: medium;
+//     padding: 15px 30px 15px 30px;
+//     color: white;
+//     font-size: 0.5rem;
+//   }
+// `;
+
+const Landing6 = styled.div`
+  grid-column: col-start 5 / span 1;
+  grid-row: 5 / 8;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+  > p {
+    color: white;
+  }
+`;
+
+const Landing7 = styled.div`
+  grid-column: col-start 5 / span 1;
+  grid-row: 8 / 14;
+  border-left: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
+  > p {
+    color: white;
+  }
+`;
+
+const Landing8 = styled.div`
+  grid-column: col-start 6 / span 1;
+  grid-row: 5 / 8;
+  border-right: 0.35vw solid white;
+  border-left: 0.35vw solid white;
+  border-top: 0.35vw solid white;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 0) 0%,
+    rgba(158, 51, 198, 0.7581233176864496) 100%
+  );
+`;
+
+const Landing9 = styled.div`
+  grid-column: col-start 6 / span 1;
+  grid-row: 8 / 14;
+  border-left: 0.35vw solid white;
+  border-right: 0.35vw solid white;
+  border-bottom: 0.35vw solid white;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 0) 0%,
+    rgba(158, 51, 198, 0.7581233176864496) 100%
+  );
+`;
+
+const PictureStyle = styled.div`
+  height: 30vh;
+  width: 50vw;
+  padding: 10px 10px 0px 0px;
+`;
