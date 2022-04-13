@@ -107,23 +107,6 @@ const Landing4 = styled.div`
     font-size: 1rem;
   }
 `;
-// const Landing5 = styled.div`
-//   margin-bottom: 58px;
-//   height: 25vh;
-//   grid-column: col-start / span 4;
-//   grid-row: 8 / 14;
-//   font-weight: medium;
-//   border-left: 0.35vw solid white;
-//   border-bottom: 0.35vw solid white;
-//   border-top: 0.35vw solid white;
-//   color: white;
-//   > p {
-//     font-weight: medium;
-//     padding: 15px 30px 15px 30px;
-//     color: white;
-//     font-size: 0.5rem;
-//   }
-// `;
 
 const Landing6 = styled.div`
   grid-column: col-start 5 / span 1;
