@@ -4,13 +4,8 @@ import Link from 'next/link';
 import footprint from '/public/pictures/footprint.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
-import GreenHosts from './green-hosts';
-import { ThemeProvider } from 'styled-components';
-import { withTheme } from 'styled-components';
-import { useState } from 'react';
 
 export default function Landingpage() {
-  const [theme, setTheme] = useState({ color: 'palevioletred' });
   return (
     <Landing>
       <Landing1>
@@ -23,17 +18,14 @@ export default function Landingpage() {
         <p>Ein Tool das deine Website untersucht...</p>
       </Landing2>
       <Landing3>
-        {/* <Link href="/green-hosts" passHref> */}
-        <StyledGreenHostsButton>Grünes Hosting</StyledGreenHostsButton>
-        <ThemeProvider theme={theme}>
-          <StyledGreenHostsButton>Themed</StyledGreenHostsButton>
-        </ThemeProvider>
-        {/* </Link> */}
+        <Link href="/green-hosts" passHref>
+          <StyledGreenHostsButton>Grünes Hosting</StyledGreenHostsButton>
+        </Link>
         <p>Hier findest du eine Liste grüner Hosting-Anbieter.</p>
       </Landing3>
       <Landing4>
         <PictureStyle>
-          <Image src={footprint} />
+          <Image src={footprint} alt={'ein gelber Fuss'} />
         </PictureStyle>
       </Landing4>
       <Landing6 />
@@ -50,6 +42,12 @@ const Landing = styled.div`
   width: 100vw;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(84, 48, 173, 1) 100%
+  );
 `;
 
 const Landing1 = styled.div`

@@ -15,9 +15,16 @@ export {
 const StyledBackgroundGrid = styled.div`
   display: grid;
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
+
+  @media screen and (min-width: 1500px) {
+    > div {
+      padding: 50px 50px 200px 50px;
+      font-size: 8rem;
+    }
+  }
 `;
 
 const Area1 = styled.div`
@@ -28,9 +35,7 @@ const Area1 = styled.div`
   border-right: 0.35vw solid white;
   text-align: bottom;
   font-weight: medium;
-  > p {
-    color: white;
-  }
+
   > div {
     font-weight: medium;
     color: white;
@@ -39,11 +44,12 @@ const Area1 = styled.div`
     transition: 1s;
   }
   @media screen and (min-width: 700px) {
-    > div {
-      padding: 50px 50px 100px 50px;
-      font-size: 4rem;
-    }
   }
+  > div {
+    padding: 100px 50px 100px 50px;
+    font-size: 3.7rem;
+  }
+
   @media screen and (min-width: 1500px) {
     > div {
       padding: 50px 50px 200px 50px;

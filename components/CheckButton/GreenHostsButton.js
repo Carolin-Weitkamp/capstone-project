@@ -4,17 +4,17 @@ import { ThemeProvider } from 'styled-components';
 import { withTheme } from 'styled-components';
 export { StyledGreenHostsButton };
 
-export default function GreenHostsButton() {
-  return (
-    <div>
-      <StyledGreenHostsButton>Normal</StyledGreenHostsButton>
+// export default function GreenHostsButton() {
+//   return (
+//     <div>
+//       <StyledGreenHostsButton>Normal</StyledGreenHostsButton>
 
-      <ThemeProvider theme={theme}>
-        <StyledGreenHostsButton>Themed</StyledGreenHostsButton>
-      </ThemeProvider>
-    </div>
-  );
-}
+//       <ThemeProvider theme={theme}>
+//         <StyledGreenHostsButton>Themed</StyledGreenHostsButton>
+//       </ThemeProvider>
+//     </div>
+//   );
+// }
 
 const StyledGreenHostsButton = styled.button`
   font-size: 1rem;
@@ -23,20 +23,7 @@ const StyledGreenHostsButton = styled.button`
   align-self: center;
   transition: 0.6s;
   cursor: pointer;
-  color: ${props => props.theme.main};
-  border: 2px solid ${props => props.theme.main};
-  background-color
 `;
-
-StyledGreenHostsButton.defaultProps = {
-  theme: {
-    main: 'hotpink',
-  },
-};
-
-const theme = {
-  main: 'mediumseagreen',
-};
 
 // background:
 // &:hover {

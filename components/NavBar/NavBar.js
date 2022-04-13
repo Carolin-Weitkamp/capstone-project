@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export { NavBar };
 
-export default function NavBar() {
+export default function NavBar({ themeToggler }) {
   return (
     <NavBarStyle>
       <Link href="/" passHref>
-        <p>Home</p>
+        <p>Start</p>
       </Link>
       <Link href="/calculator" passHref>
         <p>Rechner</p>
@@ -15,6 +15,7 @@ export default function NavBar() {
       <Link href="/green-hosts" passHref>
         <p>Grünes Hosting</p>
       </Link>
+      <button onClick={themeToggler}>☀️</button>
     </NavBarStyle>
   );
 }
@@ -26,11 +27,17 @@ const NavBarStyle = styled.div`
   align-items: center;
   z-index: 1;
   border: 0.35vw solid white;
+  box-shadow: pink;
   width: 100vw;
   height: 40px;
   bottom: 0px;
   right: 0;
-  background: white;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(84, 48, 173, 1) 100%
+  );
   cursor: pointer;
   & :hover {
     color: pink;
@@ -38,7 +45,7 @@ const NavBarStyle = styled.div`
   > p {
     font-weight: medium;
     display: flex;
-    color: black;
+    color: #8972c3;
     padding-left: 30px;
     font-size: 0.7rem;
     transition: 0, 2s;
@@ -49,13 +56,15 @@ const NavBarStyle = styled.div`
   }
   @media screen and (min-width: 700px) {
     height: 60px;
+    top: 0px;
     > p {
       padding-left: 50px;
-      font-size: 25px;
+      font-size: 20px;
     }
   }
   @media screen and (min-width: 1500px) {
     height: 100px;
+    top: 0px;
     > p {
       padding-left: 50px;
       font-size: 40px;

@@ -8,9 +8,14 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
     padding: 0;
-    background-color: black;
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    transition: all 0.50s linear;
 }
 :root {
     font-family: 'Roboto', sans-serif;
 }
+
+
 `;
