@@ -5,8 +5,12 @@ import footprint from '/public/pictures/footprint.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
 import GreenHosts from './green-hosts';
+import { ThemeProvider } from 'styled-components';
+import { withTheme } from 'styled-components';
+import { useState } from 'react';
 
 export default function Landingpage() {
+  const [theme, setTheme] = useState({ color: 'palevioletred' });
   return (
     <Landing>
       <Landing1>
@@ -19,9 +23,12 @@ export default function Landingpage() {
         <p>Ein Tool das deine Website untersucht...</p>
       </Landing2>
       <Landing3>
-        <Link href="/green-hosts" passHref>
-          <StyledGreenHostsButton>Grünes Hosting</StyledGreenHostsButton>
-        </Link>
+        {/* <Link href="/green-hosts" passHref> */}
+        <StyledGreenHostsButton>Grünes Hosting</StyledGreenHostsButton>
+        <ThemeProvider theme={theme}>
+          <StyledGreenHostsButton>Themed</StyledGreenHostsButton>
+        </ThemeProvider>
+        {/* </Link> */}
         <p>Hier findest du eine Liste grüner Hosting-Anbieter.</p>
       </Landing3>
       <Landing4>
