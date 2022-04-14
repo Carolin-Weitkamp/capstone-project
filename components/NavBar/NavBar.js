@@ -44,10 +44,6 @@ const NavBarStyle = styled.div`
     padding-left: 30px;
     font-size: 0.7rem;
     transition: 0, 2s;
-
-    /* &:active {
-      color-scheme: pink;
-    } */
   }
   @media screen and (min-width: 700px) {
     height: 60px;

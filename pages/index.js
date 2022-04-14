@@ -24,9 +24,9 @@ export default function Landingpage() {
         <p>Hier findest du eine Liste grüner Hosting-Anbieter.</p>
       </Landing3>
       <Landing4>
-        <PictureStyle>
+        {/* <PictureStyle>
           <Image src={footprint} alt={'ein gelber Fuss'} />
-        </PictureStyle>
+        </PictureStyle> */}
       </Landing4>
       <Landing6 />
       <Landing7 />

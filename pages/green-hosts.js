@@ -72,6 +72,9 @@ const Hosts1 = styled.div`
     font-size: 1.5rem;
     transition: 1s;
   }
+  @media screen and (min-width: 700px) {
+    grid-column: col-start / span 5;
+  }
 `;
 
 const Hosts2 = styled.div`
@@ -80,6 +83,7 @@ const Hosts2 = styled.div`
   height: 15vh;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
+  border-right: 0.4vw solid var(--lightgreen);
   text-align: left;
   > p {
     letter-spacing: 0.05rem;
@@ -93,6 +97,7 @@ const Hosts3 = styled.div`
   grid-row: 6;
   height: 17.5vh;
   border-left: 0.4vw solid var(--lightgreen);
+  border-right: 0.4vw solid var(--lightgreen);
 
   > p {
     padding: 15px 30px 15px 30px;
@@ -106,6 +111,7 @@ const Hosts4 = styled.div`
   height: 17.5vh;
   border-left: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
+  border-right: 0.4vw solid var(--lightgreen);
   > p {
     padding: 15px 30px 15px 30px;
     font-size: 1rem;
@@ -130,9 +136,13 @@ const Hosts6 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 5 / 8;
   border-top: 0.4vw solid var(--lightgreen);
+
   > p {
     padding: 15px 30px 15px 30px;
     font-size: 1rem;
+  }
+  @media screen and (min-width: 700px) {
+    border-left: 0.4vw solid var(--lightgreen);
   }
 `;
 const Hosts7 = styled.div`
@@ -140,6 +150,7 @@ const Hosts7 = styled.div`
   grid-row: 8 / 14;
   gap: 1vw;
   border-left: 0.4vw solid var(--lightgreen);
+  border-right: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   > p {
     padding: 15px 30px 15px 30px;
@@ -151,7 +162,7 @@ const Hosts8 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 5 / 8;
   border-right: 0.4vw solid var(--lightgreen);
-  border-left: 0.4vw solid var(--lightgreen);
+  /* border-left: 0.4vw solid var(--lightgreen); */
   border-top: 0.4vw solid var(--lightgreen);
   background: var(--green-gradient-rl);
 
@@ -159,12 +170,18 @@ const Hosts8 = styled.div`
     padding: 15px 30px 15px 30px;
     font-size: 1rem;
   }
+  @media screen and (min-width: 700px) {
+    grid-column: col-start 1 / span 0;
+    /* grid-column: col-start 0; */
+    grid-row: 5 / 8;
+    background: var(--green-gradient-rl);
+  }
 `;
 
 const Hosts9 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 8 / 14;
-  border-left: 0.4vw solid var(--lightgreen);
+  /* border-left: 0.4vw solid var(--lightgreen); */
   border-right: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   background: var(--green-gradient-rl);
