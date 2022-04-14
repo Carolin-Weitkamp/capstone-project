@@ -26,7 +26,7 @@ export default function GreenHosts() {
               setSelectedCountry={setSelectedCountry}
             />
             <p>
-              Liste der grünen <br></br> Hosting-Anbieter:
+              Grüne Hosting-Anbieter:
               <ul>
                 {countries[selectedCountry]?.providers.map(provider => (
                   <li key={provider.id}>
@@ -61,15 +61,14 @@ const Hosts = styled.div`
 const Hosts1 = styled.div`
   grid-column: col-start / span 6;
   grid-row: 1 / 5;
-  height: 25vh;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
   border-right: 0.4vw solid var(--lightgreen);
   text-align: bottom;
   > p {
-    letter-spacing: 0.07rem;
+    letter-spacing: 0.03rem;
     padding: 30px 30px 30px 30px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     transition: 1s;
   }
   @media screen and (min-width: 700px) {
@@ -89,6 +88,13 @@ const Hosts2 = styled.div`
     letter-spacing: 0.05rem;
     padding: 15px 30px 15px 30px;
     font-size: 0.8rem;
+  }
+  > ul {
+    color: hotpink;
+    list-style: none;
+  }
+  > li {
+    list-style: none;
   }
 `;
 

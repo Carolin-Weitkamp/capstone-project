@@ -9,7 +9,7 @@ export default function Landingpage() {
   return (
     <Landing>
       <Landing1>
-        <p>Wie ist der CO2-Fußabdruck deiner Website?</p>
+        <p>Wie groß ist der CO2-Fußabdruck deiner Website?</p>
       </Landing1>
       <Landing2>
         <Link href="/calculator" passHref>
@@ -46,16 +46,14 @@ const Landing = styled.div`
 const Landing1 = styled.div`
   grid-column: col-start / span 6;
   grid-row: 1 / 5;
-  height: 25vh;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
   border-right: 0.4vw solid var(--lightgreen);
   text-align: bottom;
-  font-weight: medium;
   > p {
-    font-weight: medium;
+    letter-spacing: 0.03rem;
     padding: 30px 30px 30px 30px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     transition: 1s;
   }
 `;

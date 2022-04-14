@@ -53,7 +53,7 @@ export default function Home({}) {
       <form onSubmit={handleSubmit}>
         <StyledBackgroundGrid>
           <Area1>
-            <div>Wie grün ist deine Website?</div>
+            <p>Wie grün ist deine Website?</p>
           </Area1>
           <Area2>
             <div>Wenn du es wissen willst, tippe hier deine Url ein:</div>
