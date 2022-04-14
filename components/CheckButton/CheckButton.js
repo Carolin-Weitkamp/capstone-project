@@ -2,14 +2,9 @@ import styled from 'styled-components';
 export { StyledCheckButton };
 
 const StyledCheckButton = styled.button`
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 212, 255, 0) 0%,
-    rgba(158, 51, 198, 0.7581233176864496) 100%
-  );
+  background: var(--purple-gradient-tb);
   font-size: 1rem;
-  border: 0.25vw solid white;
+  border: 0.25vw solid var(--lightgreen);
   padding: 5px 20px 5px 20px;
   align-self: center;
   color: white;

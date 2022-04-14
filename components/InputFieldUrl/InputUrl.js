@@ -2,18 +2,13 @@ import styled from 'styled-components';
 export { StyledInput };
 
 const StyledInput = styled.input`
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 212, 255, 0) 0%,
-    rgba(158, 51, 198, 0.7581233176864496) 100%
-  );
+  background: var(--purple-gradient-tb);
   width: 200px;
   height: 35px;
   margin: 5px 0 5px 0;
-  padding: 0px 10px 0px 6px; // in dem Input Feld
+  padding: 0px 10px 0px 6px;
   font-size: 1rem;
-  border: 0.25vw solid white;
+  border: 0.25vw solid var(--lightgreen);
   align-items: center;
   color: white;
   transition: 0.6s;
