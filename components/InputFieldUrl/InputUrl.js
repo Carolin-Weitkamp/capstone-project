@@ -8,7 +8,7 @@ const StyledInput = styled.input`
   margin: 5px 0 5px 0;
   padding: 0px 10px 0px 6px;
   font-size: 1rem;
-  border: 0.25vw solid var(--lightgreen);
+  border: 0.4vw solid var(--lightgreen);
   align-items: center;
   color: white;
   transition: 0.6s;

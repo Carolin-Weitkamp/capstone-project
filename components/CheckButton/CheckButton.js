@@ -4,8 +4,9 @@ export { StyledCheckButton };
 const StyledCheckButton = styled.button`
   background: var(--purple-gradient-tb);
   font-size: 1rem;
-  border: 0.25vw solid var(--lightgreen);
+  border: 0.4vw solid var(--lightgreen);
   padding: 5px 20px 5px 20px;
+  margin: 10px 10px 0px 0;
   align-self: center;
   color: white;
   transition: 0.6s;
