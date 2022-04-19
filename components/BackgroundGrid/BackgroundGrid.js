@@ -17,6 +17,7 @@ export {
 const StyledBackgroundGrid = styled.div`
   display: grid;
   width: 100vw;
+  height: 100vh;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(15, [col-start]);
 `;
@@ -27,26 +28,20 @@ const Area1 = styled.div`
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
   border-right: 0.4vw solid var(--lightgreen);
-  text-align: bottom;
-
   > p {
     letter-spacing: 0.03rem;
     padding: 30px 30px 30px 30px;
     font-size: 1.7rem;
-    transition: 1s;
   }
-
   @media screen and (min-width: 700px) {
-  }
-  > div {
-    padding: 100px 50px 100px 50px;
-    font-size: 3.7rem;
-  }
-
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 8rem;
+    border-left: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
+    grid-column: col-start / span 5;
+    grid-row: 1 / 4;
+    > p {
+      padding: 60px 50px 50px 50px;
+      font-size: 3.2rem;
     }
   }
 `;
@@ -57,22 +52,17 @@ const Area2 = styled.div`
   border-left: 0.4vw solid var(--lightgreen);
   border-right: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
-  text-align: left;
   > div {
-    font-weight: medium;
     padding: 30px 30px 15px 30px;
     font-size: 1rem;
   }
   @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
     > div {
       padding: 30px 50px 20px 50px;
       font-size: 1.5rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 3rem;
     }
   }
 `;
@@ -87,13 +77,10 @@ const Area3 = styled.div`
     font-size: 4vw;
   }
   @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
     > div {
       padding-left: 50px;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 0px 0px 0px 50px;
     }
   }
 `;
@@ -110,15 +97,12 @@ const Area4 = styled.div`
     font-size: 0.5rem;
   }
   @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
     > p {
       padding: 25px 50px 25px 50px;
       font-size: 1rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > p {
-      padding: 50px 50px 200px 50px;
-      font-size: 2rem;
     }
   }
 `;
@@ -128,6 +112,10 @@ const Area5 = styled.div`
   grid-row: 5 / 8;
   border-right: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
+  @media screen and (min-width: 700px) {
+    border-right: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+  }
 `;
 
 const Area6 = styled.div`
@@ -136,6 +124,11 @@ const Area6 = styled.div`
   border-right: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
   background: var(--purple-gradient-rl);
+  @media screen and (min-width: 700px) {
+    border-right: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+    background: none;
+  }
 `;
 
 const Area7 = styled.div`
@@ -152,15 +145,12 @@ const Area7 = styled.div`
     padding-left: 30px;
   }
   @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
     > p {
-      padding: 50px 50px 100px 50px;
-      font-size: 3rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > p {
-      padding: 50px 50px 200px 50px;
-      font-size: 6rem;
+      padding: 50px 50px 50px 50px;
+      font-size: 2.7rem;
     }
   }
 `;
@@ -170,6 +160,10 @@ const Area8 = styled.div`
   grid-row: 8 / 14;
   border-right: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
+  @media screen and (min-width: 700px) {
+    border-right: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
+  }
 `;
 
 const Area9 = styled.div`
@@ -178,6 +172,12 @@ const Area9 = styled.div`
   border-right: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   background: var(--purple-gradient-rl);
+  @media screen and (min-width: 700px) {
+    grid-column: col-start 6 / span 1;
+    grid-row: 1 / 14;
+    border-right: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
+  }
 `;
 
 const Area10 = styled.div`
@@ -187,6 +187,11 @@ const Area10 = styled.div`
   border-left: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   border-right: 0.4vw solid var(--lightgreen);
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
+  }
 `;
 
 const Area11 = styled.div`
@@ -198,4 +203,9 @@ const Area11 = styled.div`
   border-left: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   border-right: 0.4vw solid var(--lightgreen);
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
+  }
 `;

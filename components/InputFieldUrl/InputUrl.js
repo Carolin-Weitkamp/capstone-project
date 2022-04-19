@@ -21,16 +21,10 @@ const StyledInput = styled.input`
   }
   @media screen and (min-width: 700px) {
     width: 400px;
-    height: 55px;
+    height: 65px;
     margin: 10px 10px 10px 0;
     padding: 0px 0px 0px 12px;
-    font-size: 2rem;
-  }
-  @media screen and (min-width: 1500px) {
-    width: 800px;
-    height: 140px;
-    margin: 20px 0 20px 0;
-    padding: 0px 40px 0px 24px;
-    font-size: 4rem;
+    font-size: 1.8rem;
+    border: 0.3vw solid var(--lightgreen);
   }
 `;

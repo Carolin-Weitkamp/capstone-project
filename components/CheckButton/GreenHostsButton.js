@@ -6,7 +6,7 @@ const StyledGreenHostsButton = styled.button`
   font-size: 1rem;
   border: 0.4vw solid var(--lightgreen);
   padding: 5px 20px 5px 20px;
-  margin: 15px 0 0px 30px;
+  margin: 30px 30px 0px 30px;
   align-self: center;
   color: white;
   transition: 0.6s;
@@ -19,13 +19,9 @@ const StyledGreenHostsButton = styled.button`
     color: purple;
   }
   @media screen and (min-width: 700px) {
-    margin: 10px 10px 10px 0;
+    margin: 30px 10px 10px 50px;
     padding: 10px 40px 10px 40px;
-    font-size: 2rem;
-  }
-  @media screen and (min-width: 1500px) {
-    margin: 20px 0 20px 0;
-    padding: 20px 80px 20px 80px;
-    font-size: 4rem;
+    font-size: 1.8rem;
+    border: 0.3vw solid var(--lightgreen);
   }
 `;

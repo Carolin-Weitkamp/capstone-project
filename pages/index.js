@@ -49,12 +49,21 @@ const Landing1 = styled.div`
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
   border-right: 0.4vw solid var(--lightgreen);
-  text-align: bottom;
+
   > p {
     letter-spacing: 0.03rem;
     padding: 30px 30px 30px 30px;
     font-size: 1.7rem;
     transition: 1s;
+  }
+  @media screen and (min-width: 700px) {
+    border-right: 0.3vw solid var(--lightgreen);
+    border-left: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+    > p {
+      font-size: 3.2rem;
+      padding: 60px 30px 30px 50px;
+    }
   }
 `;
 
@@ -63,11 +72,18 @@ const Landing2 = styled.div`
   grid-row: 6 / 7;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
-  text-align: left;
   > p {
     padding: 0px 30px 5px 30px;
     margin-bottom: 3;
     font-size: 0.5rem;
+  }
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+    > p {
+      font-size: 0.9rem;
+      padding: 0px 30px 5px 50px;
+    }
   }
 `;
 
@@ -76,10 +92,17 @@ const Landing3 = styled.div`
   grid-row: 8 / 9;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
-
   > p {
     padding: 0px 30px 5px 30px;
     font-size: 0.5rem;
+  }
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+    > p {
+      font-size: 0.9rem;
+      padding: 0px 30px 5px 50px;
+    }
   }
 `;
 
@@ -94,31 +117,21 @@ const Landing4 = styled.div`
     padding: 15px 30px 15px 30px;
     font-size: 1rem;
   }
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
+  }
 `;
-// const Landing5 = styled.div`
-//   margin-bottom: 58px;
-//   height: 25vh;
-//   grid-column: col-start / span 4;
-//   grid-row: 8 / 14;
-//   font-weight: medium;
-//   border-left: 0.4vw solid white;
-//   border-bottom: 0.4vw solid white;
-//   border-top: 0.4vw solid white;
-//   color: white;
-//   > p {
-//     font-weight: medium;
-//     padding: 15px 30px 15px 30px;
-//     color: white;
-//     font-size: 0.5rem;
-//   }
-// `;
 
 const Landing6 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 5 / 8;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
-  > p {
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
   }
 `;
 
@@ -127,7 +140,9 @@ const Landing7 = styled.div`
   grid-row: 8 / 14;
   border-left: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
-  > p {
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
   }
 `;
 
@@ -138,6 +153,11 @@ const Landing8 = styled.div`
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
   background: var(--purple-gradient-rl);
+  @media screen and (min-width: 700px) {
+    border-right: 0.3vw solid var(--lightgreen);
+    border-left: 0.3vw solid var(--lightgreen);
+    border-top: 0.3vw solid var(--lightgreen);
+  }
 `;
 
 const Landing9 = styled.div`
@@ -147,10 +167,15 @@ const Landing9 = styled.div`
   border-right: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   background: var(--purple-gradient-rl);
+  @media screen and (min-width: 700px) {
+    border-left: 0.3vw solid var(--lightgreen);
+    border-right: 0.3vw solid var(--lightgreen);
+    border-bottom: 0.3vw solid var(--lightgreen);
+  }
 `;
 
-const PictureStyle = styled.div`
-  height: 30vh;
-  width: 50vw;
-  padding: 10px 10px 0px 0px;
-`;
+// const PictureStyle = styled.div`
+//   height: 30vh;
+//   width: 50vw;
+//   padding: 10px 10px 0px 0px;
+// `;
