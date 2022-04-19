@@ -53,7 +53,8 @@ const Result2 = styled.div`
   border-left: 0.4vw solid var(--lightgreen);
 
   > div {
-    padding: 15px 30px 15px 30px;
+    padding: 15px 15px 15px 30px;
+    letter-spacing: 0.03rem;
     font-size: 1.2rem;
   }
   @media screen and (min-width: 700px) {
@@ -75,6 +76,7 @@ const Result3 = styled.div`
   border-top: 0.4vw solid var(--lightgreen);
   > div {
     padding: 10px 10px 10px 30px;
+    letter-spacing: 0.03rem;
     font-size: 1.2rem;
   }
   @media screen and (min-width: 700px) {
@@ -85,6 +87,7 @@ const Result3 = styled.div`
     border-right: 0.3vw solid var(--lightgreen);
     > div {
       text-align: right;
+      letter-spacing: 0.03rem;
       padding: 30px 30px 30px 50px;
       font-size: 1.7rem;
     }
@@ -115,6 +118,7 @@ const Result4 = styled.div`
   > div {
     padding: 10px 30px 10px 30px;
     font-size: 1.3rem;
+    letter-spacing: 0.03rem;
   }
   @media screen and (min-width: 700px) {
     grid-column: col-start / span 3;
@@ -122,6 +126,7 @@ const Result4 = styled.div`
     border-top: none;
     border-right: 0.3vw solid var(--lightgreen);
     > div {
+      letter-spacing: 0.03rem;
       padding: 30px 50px 30px 50px;
       font-size: 1.3rem;
     }
@@ -162,6 +167,7 @@ const Result7 = styled.div`
   border-right: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   > div {
+    letter-spacing: 0.03rem;
     padding: 15px 30px 60px 30px;
     font-size: 1rem;
   }

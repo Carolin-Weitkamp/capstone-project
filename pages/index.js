@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
-import footprint from '/public/pictures/footprint.svg';
+// import footprint from '/public/pictures/footprint.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
 

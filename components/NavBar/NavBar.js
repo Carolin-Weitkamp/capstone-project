@@ -32,7 +32,12 @@ const NavBarStyle = styled.div`
   height: 40px;
   bottom: 0px;
   right: 0;
-  background: var(--lightgreen);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(185, 231, 200, 1) 0%,
+    rgba(97, 210, 134, 1) 43%
+  );
   color: purple;
   cursor: pointer;
   & :hover {
