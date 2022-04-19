@@ -26,6 +26,8 @@ import {
   Result7,
   Result8,
   Result9,
+  Result33,
+  Result77,
 } from '../components/Results/Results';
 import { StyledInput } from '../components/InputFieldUrl/InputUrl';
 import { useState } from 'react';
@@ -146,6 +148,7 @@ export default function Home({}) {
             </div>
           ) : null}
         </Result3>
+        <Result33 />
         <Result4>
           {data ? (
             <div>
@@ -168,6 +171,7 @@ export default function Home({}) {
             </div>
           ) : null}
         </Result7>
+        <Result77 />
         <Result8 />
         <Result9 />
       </Results>

@@ -10,13 +10,13 @@ export {
   Result7,
   Result8,
   Result9,
+  Result33,
+  Result77,
 };
 
 const Results = styled.div`
-  background-color: black;
   display: grid;
   width: 100vw;
-  /* height: 100vh; */
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
 `;
@@ -24,175 +24,112 @@ const Results = styled.div`
 const Result1 = styled.div`
   grid-column: col-start / span 6;
   grid-row: 1 / 5;
-  border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
-  border-right: 0.35vw solid white;
-  text-align: bottom;
-  font-weight: medium;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
+  border-right: 0.4vw solid var(--lightgreen);
   > div {
-    font-weight: medium;
-    color: white;
     padding: 30px 30px 30px 30px;
-    font-size: 2.5rem;
+    letter-spacing: 0.03rem;
+    font-size: 1.7rem;
     transition: 1s;
-  }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding: 50px 50px 100px 50px;
-      font-size: 4rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 8rem;
-    }
   }
 `;
 
 const Result2 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 5;
-  border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
   text-align: left;
   > div {
-    font-weight: medium;
     padding: 15px 30px 15px 30px;
-    color: white;
-    font-size: 1rem;
-  }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding: 50px 50px 25px 50px;
-      font-size: 1.5rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 3rem;
-    }
+    font-size: 1.2rem;
   }
 `;
 
 const Result3 = styled.div`
-  grid-column: col-start / span 4;
+  grid-column: col-start 2 / span 4;
   grid-row: 6;
-  border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
+  height: 30vh;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
 
   > div {
-    font-weight: medium;
-    padding: 15px 30px 15px 30px;
-    color: white;
+    padding: 10px 10px 10px 30px;
     font-size: 1.2rem;
   }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding-left: 50px;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 0px 0px 0px 50px;
-    }
-  }
+`;
+
+const Result33 = styled.div`
+  grid-column: col-start / span;
+  grid-row: 6;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
+  height: 30vh;
+  background-color: var(--lightgreen);
 `;
 
 const Result4 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 7;
-  border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
-  border-bottom: 0.35vw solid white;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
   > div {
-    font-weight: medium;
-    padding: 15px 30px 15px 30px;
-    color: white;
-    font-size: 1rem;
-  }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding: 25px 50px 25px 50px;
-      font-size: 1rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 2rem;
-    }
+    padding: 10px 30px 10px 30px;
+    font-size: 1.3rem;
   }
 `;
 
 const Result5 = styled.div`
   grid-column: col-start 5 / span 1;
-  grid-row: 5 / 8;
-  border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
+  grid-row: 5;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
 `;
 
 const Result6 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 5 / 8;
-  border-right: 0.35vw solid white;
-  border-left: 0.35vw solid white;
-  border-top: 0.35vw solid white;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 212, 255, 0) 0%,
-    rgba(158, 51, 198, 0.7581233176864496) 100%
-  );
+  border-right: 0.4vw solid var(--lightgreen);
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
+  background: var(--purple-gradient-rl);
 `;
 
 const Result7 = styled.div`
-  margin-bottom: 58px;
-  grid-column: col-start / span 4;
+  grid-column: col-start 2 / span 4;
   grid-row: 8 / 14;
-  font-size: 3.4rem;
-  font-weight: medium;
-  border-left: 0.35vw solid white;
-  border-bottom: 0.35vw solid white;
-  color: white;
+  border-top: 0.4vw solid var(--lightgreen);
+  border-left: 0.4vw solid var(--lightgreen);
+  border-right: 0.4vw solid var(--lightgreen);
+  border-bottom: 0.4vw solid var(--lightgreen);
   > div {
-    font-weight: medium;
-    padding: 15px 30px 15px 30px;
-    color: white;
+    padding: 15px 30px 60px 30px;
     font-size: 1rem;
   }
-  @media screen and (min-width: 700px) {
-    > div {
-      padding: 50px 50px 100px 50px;
-      font-size: 2rem;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    > div {
-      padding: 50px 50px 200px 50px;
-      font-size: 6rem;
-    }
-  }
+`;
+const Result77 = styled.div`
+  grid-column: col-start 1 / span;
+  grid-row: 8 / 14;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-bottom: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
+  background: var(--purple-gradient-tb);
 `;
 
 const Result8 = styled.div`
-  grid-column: col-start 5 / span 1;
-  grid-row: 8 / 14;
-  border-left: 0.35vw solid white;
-  border-bottom: 0.35vw solid white;
+  grid-column: col-start 5;
+  grid-row: 7 / 11;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-top: 0.4vw solid var(--lightgreen);
+  background-color: var(--lightgreen);
 `;
 
 const Result9 = styled.div`
   grid-column: col-start 6 / span 1;
-  grid-row: 8 / 14;
-  border-left: 0.35vw solid white;
-  border-right: 0.35vw solid white;
-  border-bottom: 0.35vw solid white;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 212, 255, 0) 0%,
-    rgba(158, 51, 198, 0.7581233176864496) 100%
-  );
+  grid-row: 8 / 11;
+  border-left: 0.4vw solid var(--lightgreen);
+  border-right: 0.4vw solid var(--lightgreen);
+  border-bottom: 0.4vw solid var(--lightgreen);
+  background: var(--purple-gradient-rl);
 `;

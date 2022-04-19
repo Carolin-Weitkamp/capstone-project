@@ -61,28 +61,25 @@ const Landing1 = styled.div`
 const Landing2 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 6 / 7;
-  height: 10vh;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
   text-align: left;
   > p {
-    font-weight: medium;
-    padding: 0px 30px 30px 30px;
-    font-size: 0.3rem;
+    padding: 0px 30px 5px 30px;
+    margin-bottom: 3;
+    font-size: 0.5rem;
   }
 `;
 
 const Landing3 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 8 / 9;
-  height: 10vh;
   border-left: 0.4vw solid var(--lightgreen);
   border-top: 0.4vw solid var(--lightgreen);
 
   > p {
-    font-weight: medium;
-    padding: 0px 30px 35px 30px;
-    font-size: 0.3rem;
+    padding: 0px 30px 5px 30px;
+    font-size: 0.5rem;
   }
 `;
 
@@ -94,7 +91,6 @@ const Landing4 = styled.div`
   border-top: 0.4vw solid var(--lightgreen);
   border-bottom: 0.4vw solid var(--lightgreen);
   > p {
-    font-weight: medium;
     padding: 15px 30px 15px 30px;
     font-size: 1rem;
   }
