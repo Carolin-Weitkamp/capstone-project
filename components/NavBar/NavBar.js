@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
+import darklight from '/public/pictures/darklight.svg';
 
 export { NavBar };
 
@@ -15,10 +17,32 @@ export default function NavBar({ themeToggler }) {
       <Link href="/green-hosts" passHref>
         <p>Grünes Hosting</p>
       </Link>
-      <button onClick={themeToggler}>☀️</button>
+      <LightDarkStyle onClick={themeToggler}>
+        <Image
+          src={darklight}
+          alt={
+            'icon mit dem man die Anzeige auf heller oder dunkel stellen kann'
+          }
+        />
+      </LightDarkStyle>
     </NavBarStyle>
   );
 }
+
+const LightDarkStyle = styled.button`
+  height: 30px;
+  position: flex;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+  right: 40px;
+
+  @media screen and (min-width: 700px) {
+    height: 50px;
+    top: 10px;
+  }
+`;
 
 const NavBarStyle = styled.div`
   position: fixed;
