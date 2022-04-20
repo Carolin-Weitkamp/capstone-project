@@ -46,9 +46,9 @@ const Landing = styled.div`
 const Landing1 = styled.div`
   grid-column: col-start / span 6;
   grid-row: 1 / 5;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
-  border-right: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
+  border-right: ${({ theme }) => theme.border};
 
   > p {
     letter-spacing: 0.03rem;
@@ -57,9 +57,6 @@ const Landing1 = styled.div`
     transition: 1s;
   }
   @media screen and (min-width: 700px) {
-    border-right: 0.3vw solid var(--lightgreen);
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
     > p {
       font-size: 3.2rem;
       padding: 60px 30px 30px 50px;
@@ -70,16 +67,14 @@ const Landing1 = styled.div`
 const Landing2 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 6 / 7;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
   > p {
     padding: 0px 30px 5px 30px;
     margin-bottom: 3;
     font-size: 0.5rem;
   }
   @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
     > p {
       font-size: 0.9rem;
       padding: 0px 30px 5px 50px;
@@ -90,15 +85,13 @@ const Landing2 = styled.div`
 const Landing3 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 8 / 9;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
   > p {
     padding: 0px 30px 5px 30px;
     font-size: 0.5rem;
   }
   @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
     > p {
       font-size: 0.9rem;
       padding: 0px 30px 5px 50px;
@@ -110,68 +103,51 @@ const Landing4 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 10 / 14;
   height: 50vh;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
-  border-bottom: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
   > p {
     padding: 15px 30px 15px 30px;
     font-size: 1rem;
   }
   @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
+    > p {
+      padding: 15px 30px 15px 50px;
+      font-size: 2rem;
+    }
   }
 `;
 
 const Landing6 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 5 / 8;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
-  @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
-  }
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
 `;
 
 const Landing7 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 8 / 14;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-bottom: 0.4vw solid var(--lightgreen);
-  @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
-  }
+  border-left: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
 `;
 
 const Landing8 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 5 / 8;
-  border-right: 0.4vw solid var(--lightgreen);
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
+  border-right: ${({ theme }) => theme.border};
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
   background: var(--purple-gradient-rl);
-  @media screen and (min-width: 700px) {
-    border-right: 0.3vw solid var(--lightgreen);
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
-  }
 `;
 
 const Landing9 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 8 / 14;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-right: 0.4vw solid var(--lightgreen);
-  border-bottom: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-right: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
   background: var(--purple-gradient-rl);
-  @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-right: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
-  }
 `;
 
 // const PictureStyle = styled.div`

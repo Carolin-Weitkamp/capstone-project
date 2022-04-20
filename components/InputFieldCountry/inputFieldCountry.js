@@ -24,36 +24,24 @@ function InputFieldCountry({
 export default InputFieldCountry;
 
 const StyledSelect = styled.select`
-  background: var(--green-gradient-tb);
-  width: 200px;
+  background: var(--purple-gradient-rl);
+  width: 185px;
   height: 35px;
   margin: 30px 0px 5px 30px;
   padding: 0px 20px 0px 6px; // in dem Input Feld
   font-size: 0.5rem;
-  border: 0.4vw solid var(--lightgreen);
+  border: ${({ theme }) => theme.border};
   align-items: center;
-  color: var(--lightgreen);
   transition: 0.6s;
+  color: yellow;
   cursor: pointer;
-  > p {
-    color: green;
-  }
   &:hover {
-    color: green;
-    /* }
-  > ul {
-    color: hotpink;
-    list-style: none;
-  }
-  > li {
-    color: hotpink;
-    list-style: none; */
+    color: yellow;
   }
   @media screen and (min-width: 700px) {
     width: 400px;
     height: 70px;
     font-size: 1.5rem;
     margin: 50px 0px 5px 50px;
-    border: 0.3vw solid var(--lightgreen);
   }
 `;

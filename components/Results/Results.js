@@ -24,10 +24,10 @@ const Results = styled.div`
 const Result1 = styled.div`
   grid-column: col-start / span 6;
   grid-row: 1 / 5;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
-  border-right: 0.4vw solid var(--lightgreen);
-  border-bottom: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
+  border-right: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
   > div {
     padding: 30px 30px 30px 30px;
     letter-spacing: 0.03rem;
@@ -37,8 +37,6 @@ const Result1 = styled.div`
   @media screen and (min-width: 700px) {
     grid-column: col-start / span 5;
     grid-row: 1 / 5;
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
     border-right: none;
     > div {
       font-size: 3.2rem;
@@ -50,7 +48,7 @@ const Result1 = styled.div`
 const Result2 = styled.div`
   grid-column: col-start / span 3;
   grid-row: 5;
-  border-left: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
 
   > div {
     padding: 15px 15px 15px 30px;
@@ -58,9 +56,7 @@ const Result2 = styled.div`
     font-size: 1.2rem;
   }
   @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
     border-top: none;
-    border-right: 0.3vw solid var(--lightgreen);
     > div {
       padding: 30px 30px 30px 50px;
       font-size: 2rem;
@@ -71,20 +67,15 @@ const Result2 = styled.div`
 const Result3 = styled.div`
   grid-column: col-start 2 / span 4;
   grid-row: 6;
-  height: 30vh;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
   > div {
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 30px 30px;
     letter-spacing: 0.03rem;
     font-size: 1.2rem;
   }
   @media screen and (min-width: 700px) {
     grid-column: col-start 1 / span 4;
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
-    border-right: 0.3vw solid var(--lightgreen);
     > div {
       text-align: right;
       letter-spacing: 0.03rem;
@@ -97,34 +88,28 @@ const Result3 = styled.div`
 const Result33 = styled.div`
   grid-column: col-start / span;
   grid-row: 6;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
-  height: 30vh;
-  background-color: var(--lightgreen);
-  opacity: 50%;
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
+  background-color: var(--purple-gradient-rl);
   @media screen and (min-width: 700px) {
     opacity: 100;
     background: none;
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
   }
 `;
 
 const Result4 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 7;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
   > div {
     padding: 10px 30px 10px 30px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 0.03rem;
   }
   @media screen and (min-width: 700px) {
     grid-column: col-start / span 3;
-    border-left: 0.3vw solid var(--lightgreen);
     border-top: none;
-    border-right: 0.3vw solid var(--lightgreen);
     > div {
       letter-spacing: 0.03rem;
       padding: 30px 50px 30px 50px;
@@ -136,7 +121,7 @@ const Result4 = styled.div`
 const Result5 = styled.div`
   grid-column: col-start 5 / span 1;
   grid-row: 5;
-  border-left: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
   @media screen and (min-width: 700px) {
     grid-column: col-start 4 / span 2;
     grid-row: 5 / 10;
@@ -147,34 +132,26 @@ const Result5 = styled.div`
 const Result6 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 5 / 8;
-  border-right: 0.4vw solid var(--lightgreen);
-  border-left: 0.4vw solid var(--lightgreen);
-  background: var(--purple-gradient-rl);
+  border-right: ${({ theme }) => theme.border};
+  border-left: ${({ theme }) => theme.border};
+  background-color: var(--purple-gradient-rl);
   @media screen and (min-width: 700px) {
     grid-row: 1 / 14;
-    border-right: 0.3vw solid var(--lightgreen);
-    border-left: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
   }
 `;
 
 const Result7 = styled.div`
   grid-column: col-start 2 / span 4;
   grid-row: 8 / 14;
-  border-top: 0.4vw solid var(--lightgreen);
-  border-left: 0.4vw solid var(--lightgreen);
-  border-right: 0.4vw solid var(--lightgreen);
-  border-bottom: 0.4vw solid var(--lightgreen);
+  border-top: ${({ theme }) => theme.border};
+  border-left: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
   > div {
     letter-spacing: 0.03rem;
     padding: 15px 30px 60px 30px;
     font-size: 1rem;
   }
   @media screen and (min-width: 700px) {
-    border-top: 0.3vw solid var(--lightgreen);
-    border-left: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
     border-right: none;
     > div {
       text-align: right;
@@ -186,24 +163,17 @@ const Result7 = styled.div`
 const Result77 = styled.div`
   grid-column: col-start 1 / span;
   grid-row: 8 / 14;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-bottom: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
-  background: var(--purple-gradient-tb);
-  @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
-    border-top: 0.3vw solid var(--lightgreen);
-  }
+  border-left: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
+  background-color: var(--purple-gradient-rl);
 `;
 
 const Result8 = styled.div`
   grid-column: col-start 5;
   grid-row: 7 / 11;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-top: 0.4vw solid var(--lightgreen);
-  background-color: var(--lightgreen);
-  opacity: 20%;
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
   @media screen and (min-width: 700px) {
     border-left: none;
     border-top: none;
@@ -214,13 +184,8 @@ const Result8 = styled.div`
 const Result9 = styled.div`
   grid-column: col-start 6 / span 1;
   grid-row: 8 / 11;
-  border-left: 0.4vw solid var(--lightgreen);
-  border-right: 0.4vw solid var(--lightgreen);
-  border-bottom: 0.4vw solid var(--lightgreen);
+  border-left: ${({ theme }) => theme.border};
+  border-right: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
   background: var(--purple-gradient-rl);
-  @media screen and (min-width: 700px) {
-    border-left: 0.3vw solid var(--lightgreen);
-    border-right: 0.3vw solid var(--lightgreen);
-    border-bottom: 0.3vw solid var(--lightgreen);
-  }
 `;
