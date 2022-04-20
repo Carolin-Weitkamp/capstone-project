@@ -2,18 +2,13 @@ import styled from 'styled-components';
 export { StyledInput };
 
 const StyledInput = styled.input`
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 212, 255, 0) 0%,
-    rgba(158, 51, 198, 0.7581233176864496) 100%
-  );
+  background: var(--purple-gradient-tb);
   width: 200px;
   height: 35px;
   margin: 5px 0 5px 0;
-  padding: 0px 10px 0px 6px; // in dem Input Feld
+  padding: 0px 10px 0px 6px;
   font-size: 1rem;
-  border: 0.25vw solid white;
+  border: 0.4vw solid var(--lightgreen);
   align-items: center;
   color: white;
   transition: 0.6s;
@@ -26,16 +21,10 @@ const StyledInput = styled.input`
   }
   @media screen and (min-width: 700px) {
     width: 400px;
-    height: 55px;
+    height: 65px;
     margin: 10px 10px 10px 0;
     padding: 0px 0px 0px 12px;
-    font-size: 2rem;
-  }
-  @media screen and (min-width: 1500px) {
-    width: 800px;
-    height: 140px;
-    margin: 20px 0 20px 0;
-    padding: 0px 40px 0px 24px;
-    font-size: 4rem;
+    font-size: 1.8rem;
+    border: 0.3vw solid var(--lightgreen);
   }
 `;

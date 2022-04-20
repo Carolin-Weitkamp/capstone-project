@@ -12,6 +12,8 @@ import {
   Area7,
   Area8,
   Area9,
+  Area10,
+  Area11,
 } from '../components/BackgroundGrid/BackgroundGrid';
 import {
   Results,
@@ -24,22 +26,19 @@ import {
   Result7,
   Result8,
   Result9,
+  Result33,
+  Result77,
 } from '../components/Results/Results';
 import { StyledInput } from '../components/InputFieldUrl/InputUrl';
-import InputFieldCountry from '../components/InputFieldCountry/inputFieldCountry';
 import { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
-import CheckGreenButton from '../components/CheckButton/CheckGreenButton';
-import NavBar from '../components/NavBar/NavBar';
-import Load from '../components/Loading/Load';
 import LoadingSide from '../components/LoadingSide/LoadingSide';
-import GreenHosts from './green-hosts';
 import Link from 'next/link';
 
 export default function Home({}) {
   const router = useRouter();
-  const url = router.query.url; // url? if not url
+  const url = router.query.url;
   const { data } = useSWR(`/api/carbon?url=${encodeURIComponent(url)}`, {
     isPaused: () => !url,
   });
@@ -48,8 +47,8 @@ export default function Home({}) {
     event.preventDefault();
     const newUrl = event.target.elements.urlInput.value;
     router.push({
-      pathname: router.pathname, // auf diese Pfad wird weitergeleitet
-      query: { url: newUrl }, // und das ist die url die eingegeben wird
+      pathname: router.pathname,
+      query: { url: newUrl },
     });
   }
 
@@ -58,7 +57,7 @@ export default function Home({}) {
       <form onSubmit={handleSubmit}>
         <StyledBackgroundGrid>
           <Area1>
-            <div>Wie grün ist deine Website?</div>
+            <p>Wie grün ist deine Website?</p>
           </Area1>
           <Area2>
             <div>Wenn du es wissen willst, tippe hier deine Url ein:</div>
@@ -72,18 +71,20 @@ export default function Home({}) {
             </div>
           </Area3>
           <Area4>
-            <p>Anhand von Parametern.</p>
+            <p>Anhand von Parametern und bereits geprüften Websites.</p>
           </Area4>
-          <Area5></Area5>
-          <Area6></Area6>
+          <Area5 />
+          <Area6 />
           <Area7>
             <p>
-              Dieses Tool gibt dir einen Überblick wie umweltfreundlich deine
+              Dieses Rechner gibt dir einen Überblick wie umweltfreundlich deine
               Website ist.
             </p>
           </Area7>
-          <Area8></Area8>
-          <Area9></Area9>
+          <Area8 />
+          <Area9 />
+          <Area10 />
+          <Area11 />
         </StyledBackgroundGrid>
       </form>
     );
@@ -92,7 +93,7 @@ export default function Home({}) {
   if (!data) {
     return (
       <>
-        <LoadingSide></LoadingSide>
+        <LoadingSide />
       </>
     );
   }
@@ -147,6 +148,7 @@ export default function Home({}) {
             </div>
           ) : null}
         </Result3>
+        <Result33 />
         <Result4>
           {data ? (
             <div>
@@ -156,8 +158,8 @@ export default function Home({}) {
             </div>
           ) : null}
         </Result4>
-        <Result5></Result5>
-        <Result6></Result6>
+        <Result5 />
+        <Result6 />
         <Result7>
           {data ? (
             <div>
@@ -169,8 +171,9 @@ export default function Home({}) {
             </div>
           ) : null}
         </Result7>
-        <Result8></Result8>
-        <Result9></Result9>
+        <Result77 />
+        <Result8 />
+        <Result9 />
       </Results>
     </>
   );

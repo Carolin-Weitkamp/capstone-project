@@ -26,33 +26,29 @@ const NavBarStyle = styled.div`
   justify-content: start;
   align-items: center;
   z-index: 1;
-  border: 0.35vw solid white;
+  border: 0.4vw solid var(--lightgreen);
   box-shadow: pink;
   width: 100vw;
   height: 40px;
   bottom: 0px;
   right: 0;
   background: linear-gradient(
-    180deg,
+    0deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(84, 48, 173, 1) 100%
+    rgba(185, 231, 200, 1) 0%,
+    rgba(97, 210, 134, 1) 43%
   );
+  color: purple;
   cursor: pointer;
   & :hover {
-    color: pink;
+    color: white;
   }
   > p {
     font-weight: medium;
     display: flex;
-    color: #8972c3;
     padding-left: 30px;
     font-size: 0.7rem;
     transition: 0, 2s;
-
-    /* &:active {
-      color-scheme: pink;
-    } */
   }
   @media screen and (min-width: 700px) {
     height: 60px;
