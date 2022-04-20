@@ -131,9 +131,12 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.cleanerThan > 0.5 ? (
-                <p>zählt zu den 50% der sauberen Websites</p>
+                <p>ist sauberer als {data.cleanerThan * 100}% der Websites</p>
               ) : (
-                <p>zählt zu den 50% der dreckigen Websites.</p>
+                <p>
+                  ist dreckiger als {(1 - data.cleanerThan) * 100}% der
+                  Websites.
+                </p>
               )}
             </div>
           ) : null}
@@ -142,7 +145,7 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                beim Laden der Webseite werden{data.bytes.toFixed(2)}Bytes
+                beim Laden der Webseite werden {data.bytes.toFixed(2)} Bytes
                 übertragenen.
               </p>
             </div>
@@ -164,9 +167,9 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                Die Seite verbraucht ungefähr
-                {data.statistics.co2.grid.grams.toFixed(2)}
-                Gramm CO2 bei jedem Ladevorgang.
+                Die Seite verbraucht ungefähr{' '}
+                {data.statistics.co2.grid.grams.toFixed(2)} Gramm CO2 bei jedem
+                Ladevorgang.
               </p>
             </div>
           ) : null}

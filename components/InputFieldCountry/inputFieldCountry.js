@@ -40,14 +40,14 @@ const StyledSelect = styled.select`
   }
   &:hover {
     color: green;
-  }
+    /* }
   > ul {
     color: hotpink;
     list-style: none;
   }
   > li {
     color: hotpink;
-    list-style: none;
+    list-style: none; */
   }
   @media screen and (min-width: 700px) {
     width: 400px;

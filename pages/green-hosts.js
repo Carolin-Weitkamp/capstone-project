@@ -30,7 +30,13 @@ export default function GreenHosts() {
               <ul>
                 {countries[selectedCountry]?.providers.map(provider => (
                   <li key={provider.id}>
-                    <a href={provider.website}>{provider.naam}</a>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={`https://${provider.website}`}
+                    >
+                      {provider.naam}
+                    </a>
                   </li>
                 ))}
               </ul>
