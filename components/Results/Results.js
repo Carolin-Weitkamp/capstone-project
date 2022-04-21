@@ -91,6 +91,10 @@ const Result33 = styled.div`
   border-left: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
   background-color: var(--purple-gradient-rl);
+  transition: 2s;
+  :hover {
+    background-color: var(--textalternativ);
+  }
   @media screen and (min-width: 700px) {
     opacity: 100;
     background: none;
@@ -135,6 +139,10 @@ const Result6 = styled.div`
   border-right: ${({ theme }) => theme.border};
   border-left: ${({ theme }) => theme.border};
   background-color: var(--purple-gradient-rl);
+  transition: 2s;
+  :hover {
+    background-color: var(--textalternativ);
+  }
   @media screen and (min-width: 700px) {
     grid-row: 1 / 14;
   }
@@ -167,6 +175,10 @@ const Result77 = styled.div`
   border-bottom: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
   background-color: var(--purple-gradient-rl);
+  transition: 2s;
+  :hover {
+    background-color: var(--textalternativ);
+  }
 `;
 
 const Result8 = styled.div`
@@ -188,4 +200,8 @@ const Result9 = styled.div`
   border-right: ${({ theme }) => theme.border};
   border-bottom: ${({ theme }) => theme.border};
   background: var(--purple-gradient-rl);
+  transition: 2s;
+  :hover {
+    background-color: var(--textalternativ);
+  }
 `;

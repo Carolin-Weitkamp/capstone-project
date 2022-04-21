@@ -9,13 +9,11 @@ const StyledCalculatorButton = styled.button`
   margin: 30px 0 0px 30px;
   align-self: center;
   transition: 0.6s;
+  color: var(--textalternativ);
   cursor: pointer;
   &:hover {
-    background-color: white;
-  }
-
-  &:hover {
-    color: purple;
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.flatcolor};
   }
   @media screen and (min-width: 700px) {
     margin: 30px 10px 10px 50px;

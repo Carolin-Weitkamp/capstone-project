@@ -6,16 +6,14 @@ const StyledGreenHostsButton = styled.button`
   font-size: 1.1rem;
   border: ${({ theme }) => theme.border};
   padding: 7px 20px 7px 20px;
-  margin: 30px 30px 0px 30px;
+  margin: 30px 0 0px 30px;
   align-self: center;
   transition: 0.6s;
   cursor: pointer;
+  color: var(--textalternativ);
   &:hover {
-    background-color: white;
-  }
-
-  &:hover {
-    color: purple;
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.flatcolor};
   }
   @media screen and (min-width: 700px) {
     margin: 30px 10px 10px 50px;

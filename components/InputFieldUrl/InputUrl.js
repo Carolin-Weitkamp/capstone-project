@@ -11,12 +11,10 @@ const StyledInput = styled.input`
   border: ${({ theme }) => theme.border};
   align-items: center;
   transition: 0.6s;
+  color: var(--textalternativ);
   &:hover {
-    background-color: white;
-  }
-
-  &:hover {
-    color: purple;
+    background-color: ${({ theme }) => theme.body};
+    color: var(--textalternativ);
   }
   @media screen and (min-width: 700px) {
     width: 400px;
