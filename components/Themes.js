@@ -1,12 +1,14 @@
 export const lightTheme = {
-  body: '#FFF',
-  text: 'var(--lightgreen)',
-  toggleBorder: '#FFF',
-  background: '#363537',
+  body: 'white',
+  text: 'black',
+  border: '2.5px solid hotpink',
+  flatcolor: 'rgba(0, 255, 0, 0.5)',
+  navbar: 'white',
 };
 export const darkTheme = {
-  body: 'radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(14,1,22,1) 67%, rgba(56,15,96,1) 100%);',
-  text: 'var(--lightgreen)',
-  toggleBorder: '#6B8096',
-  background: '#999',
+  body: 'black',
+  text: 'white',
+  border: '2.5px solid yellow',
+  flatcolor: 'rgba(158, 70, 250, 0.8)',
+  navbar: 'black',
 };

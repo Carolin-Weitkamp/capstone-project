@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
+import darklight from '/public/pictures/darklight.svg';
 
 export { NavBar };
 
@@ -15,10 +17,19 @@ export default function NavBar({ themeToggler }) {
       <Link href="/green-hosts" passHref>
         <p>Grünes Hosting</p>
       </Link>
-      <button onClick={themeToggler}>☀️</button>
+      <DayLightButton onClick={themeToggler}>
+        <Image src={darklight} alt={'schwarz weißer Button'} />
+      </DayLightButton>
     </NavBarStyle>
   );
 }
+
+const DayLightButton = styled.button`
+  background: none;
+  border: none;
+  position: fixed;
+  width: 35px;
+`;
 
 const NavBarStyle = styled.div`
   position: fixed;
@@ -26,22 +37,16 @@ const NavBarStyle = styled.div`
   justify-content: start;
   align-items: center;
   z-index: 1;
-  border: 0.4vw solid var(--lightgreen);
+  border: ${({ theme }) => theme.border};
   box-shadow: pink;
   width: 100vw;
   height: 40px;
   bottom: 0px;
   right: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(185, 231, 200, 1) 0%,
-    rgba(97, 210, 134, 1) 43%
-  );
-  color: purple;
+  background: ${({ theme }) => theme.navbar};
   cursor: pointer;
   & :hover {
-    color: white;
+    color: hotpink;
   }
   > p {
     font-weight: medium;

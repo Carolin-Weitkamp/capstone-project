@@ -113,12 +113,12 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.green === true ? (
-                <p style={{ color: 'green' }}>
-                  diese Webseite wird grün gehostet
+                <p style={{ color: 'rgba(0, 255, 0, 0.5)' }}>
+                  Diese Webseite wird grün gehostet.
                 </p>
               ) : (
                 <div>
-                  <p>diese Webseite wird nicht grün gehostet.</p>
+                  <p>Diese Webseite wird nicht grün gehostet.</p>
                   <Link href="/green-hosts" passHref>
                     <StyledCheckButton>zu grün wechseln</StyledCheckButton>
                   </Link>
@@ -131,9 +131,15 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.cleanerThan > 0.5 ? (
-                <p>zählt zu den 50% der sauberen Websites</p>
+                <p>
+                  Sie ist sauberer als {data.cleanerThan * 100}% der bereits
+                  berechneten Websites.
+                </p>
               ) : (
-                <p>zählt zu den 50% der dreckigen Websites.</p>
+                <p>
+                  Sie ist dreckiger als {(1 - data.cleanerThan) * 100}% der
+                  bereits berechneten Websites.
+                </p>
               )}
             </div>
           ) : null}
@@ -142,7 +148,7 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                beim Laden der Webseite werden{data.bytes.toFixed(2)}Bytes
+                Beim Laden der Webseite werden {data.bytes.toFixed(2)} Bytes
                 übertragenen.
               </p>
             </div>
@@ -153,7 +159,8 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                Verbrauchte Liter: {data.statistics.co2.grid.litres.toFixed(3)}
+                Es werden ca. {data.statistics.co2.grid.litres.toFixed(2)} Liter
+                Wasser verbraucht.
               </p>
             </div>
           ) : null}
@@ -164,9 +171,9 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                Die Seite verbraucht ungefähr
-                {data.statistics.co2.grid.grams.toFixed(2)}
-                Gramm CO2 bei jedem Ladevorgang.
+                Insgesamt werden in etwa{' '}
+                {data.statistics.co2.grid.grams.toFixed(2)} Gramm CO2 bei jedem
+                Ladevorgang verbrannt.
               </p>
             </div>
           ) : null}

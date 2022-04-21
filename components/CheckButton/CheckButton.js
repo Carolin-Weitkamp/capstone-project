@@ -2,13 +2,12 @@ import styled from 'styled-components';
 export { StyledCheckButton };
 
 const StyledCheckButton = styled.button`
-  background: var(--purple-gradient-tb);
+  background: var(--purple-gradient-rl);
   font-size: 1rem;
-  border: 0.4vw solid var(--lightgreen);
+  border: ${({ theme }) => theme.border};
   padding: 5px 20px 5px 20px;
   margin: 10px 10px 0px 0;
   align-self: center;
-  color: white;
   transition: 0.6s;
   cursor: pointer;
   &:hover {
@@ -22,6 +21,5 @@ const StyledCheckButton = styled.button`
     margin: 10px 10px 10px 0;
     padding: 10px 40px 10px 40px;
     font-size: 1.8rem;
-    border: 0.3vw solid var(--lightgreen);
   }
 `;
