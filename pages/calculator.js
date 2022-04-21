@@ -71,13 +71,13 @@ export default function Home({}) {
             </div>
           </Area3>
           <Area4>
-            <p>Anhand von Parametern und bereits geprüften Websites.</p>
+            <p>Wie wird berechnet? Erfahre mehr.</p>
           </Area4>
           <Area5 />
           <Area6 />
           <Area7>
             <p>
-              Dieses Rechner gibt dir einen Überblick wie umweltfreundlich deine
+              Dieses Rechner gibt einen Überblick wie umweltfreundlich deine
               Website ist.
             </p>
           </Area7>

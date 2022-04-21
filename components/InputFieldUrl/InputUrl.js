@@ -6,8 +6,8 @@ const StyledInput = styled.input`
   width: 200px;
   height: 35px;
   margin: 5px 0 5px 0;
-  padding: 0px 10px 0px 6px;
-  font-size: 1rem;
+  padding: 0px 10px 0px 7px;
+  font-size: 1.1rem;
   border: ${({ theme }) => theme.border};
   align-items: center;
   transition: 0.6s;

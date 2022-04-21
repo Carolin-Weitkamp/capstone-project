@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-// import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
-// import footprint from '/public/pictures/footprint.svg';
+import footprintgreen from '/public/pictures/footprintgreen.svg';
+import footprintpurple from '/public/pictures/footprintpurple.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
 
-export default function Landingpage() {
+export default function Landingpage({ toggleButton }) {
   return (
     <Landing>
       <Landing1>
@@ -15,18 +16,22 @@ export default function Landingpage() {
         <Link href="/calculator" passHref>
           <StyledCalculatorButton>Zum Rechner</StyledCalculatorButton>
         </Link>
-        <p>Ein Tool das deine Website untersucht...</p>
+        <p>Ein Tool das deine Website auf Nachhaltigkeit untersucht.</p>
       </Landing2>
       <Landing3>
         <Link href="/green-hosts" passHref>
           <StyledGreenHostsButton>Grünes Hosting</StyledGreenHostsButton>
         </Link>
-        <p>Hier findest du eine Liste grüner Hosting-Anbieter.</p>
+        <p>Eine Liste grüner Hosting-Anbieter sortiert nach Ländern.</p>
       </Landing3>
       <Landing4>
-        {/* <PictureStyle>
-          <Image src={footprint} alt={'ein gelber Fuss'} />
-        </PictureStyle> */}
+        <PictureStyle>
+          {toggleButton === false ? (
+            <Image src={footprintgreen} alt={'lila Fuß'} />
+          ) : (
+            <Image src={footprintpurple} alt={'grüner Fuß'} />
+          )}
+        </PictureStyle>
       </Landing4>
       <Landing6 />
       <Landing7 />
@@ -38,7 +43,7 @@ export default function Landingpage() {
 
 const Landing = styled.div`
   display: grid;
-  width: 100vw;
+  width: 100%;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
 `;
@@ -72,7 +77,7 @@ const Landing2 = styled.div`
   > p {
     padding: 0px 30px 5px 30px;
     margin-bottom: 3;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   @media screen and (min-width: 700px) {
     > p {
@@ -89,7 +94,7 @@ const Landing3 = styled.div`
   border-top: ${({ theme }) => theme.border};
   > p {
     padding: 0px 30px 5px 30px;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   @media screen and (min-width: 700px) {
     > p {
@@ -150,8 +155,7 @@ const Landing9 = styled.div`
   background: var(--purple-gradient-rl);
 `;
 
-// const PictureStyle = styled.div`
-//   height: 30vh;
-//   width: 50vw;
-//   padding: 10px 10px 0px 0px;
-// `;
+const PictureStyle = styled.div`
+  height: 40vh;
+  padding: 30px 30px 0px 0px;
+`;
