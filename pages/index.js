@@ -156,6 +156,6 @@ const Landing9 = styled.div`
 `;
 
 const PictureStyle = styled.div`
-  height: 40vh;
+  height: 50vh;
   padding: 30px 30px 0px 0px;
 `;

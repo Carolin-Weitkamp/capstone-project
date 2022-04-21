@@ -30,7 +30,7 @@ const Area1 = styled.div`
   border-right: ${({ theme }) => theme.border};
   > p {
     letter-spacing: 0.03rem;
-    padding: 30px 30px 30px 30px;
+    padding: 30px 30px 20px 30px;
     font-size: 1.7rem;
   }
   @media screen and (min-width: 700px) {
@@ -50,7 +50,7 @@ const Area2 = styled.div`
   border-right: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
   > div {
-    padding: 30px 30px 15px 30px;
+    padding: 30px 30px 10px 30px;
     font-size: 1rem;
   }
   @media screen and (min-width: 700px) {
@@ -85,7 +85,7 @@ const Area4 = styled.div`
   border-bottom: ${({ theme }) => theme.border};
   > p {
     font-weight: medium;
-    padding: 5px 30px 10px 30px;
+    padding: 0px 30px 0px 30px;
     font-size: 0.7rem;
   }
   @media screen and (min-width: 700px) {
@@ -117,15 +117,13 @@ const Area6 = styled.div`
 const Area7 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 8 / 14;
-  font-size: 3.4rem;
   border-left: ${({ theme }) => theme.border};
   border-right: ${({ theme }) => theme.border};
   border-bottom: ${({ theme }) => theme.border};
   > p {
-    padding: 30px 30px 30px 30px;
+    padding: 20px 30px 20px 30px;
     letter-spacing: 0.01rem;
     font-size: 1.2rem;
-    padding-left: 30px;
   }
   @media screen and (min-width: 700px) {
     > p {
@@ -157,7 +155,6 @@ const Area9 = styled.div`
 const Area10 = styled.div`
   grid-column: col-start / span 4;
   grid-row: 14 / 15;
-  height: 50px;
   background-color: var(--purple-gradient-rl);
   border-left: ${({ theme }) => theme.border};
   border-bottom: ${({ theme }) => theme.border};
@@ -167,7 +164,7 @@ const Area10 = styled.div`
 const Area11 = styled.div`
   grid-column: col-start 5 / span 6;
   grid-row: 14 / 15;
-  height: 50px;
+  height: 100px;
   border-bottom: ${({ theme }) => theme.border};
   border-right: ${({ theme }) => theme.border};
 `;
