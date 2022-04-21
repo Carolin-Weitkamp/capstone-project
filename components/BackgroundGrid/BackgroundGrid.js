@@ -86,7 +86,7 @@ const Area4 = styled.div`
   > p {
     font-weight: medium;
     padding: 5px 30px 10px 30px;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   @media screen and (min-width: 700px) {
     > p {

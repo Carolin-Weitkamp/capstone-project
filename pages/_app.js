@@ -7,8 +7,11 @@ import { useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light');
+  const [toggleButton, setToggleButton] = useState(false);
+
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
+    setToggleButton(!toggleButton);
   };
 
   return (
@@ -21,8 +24,11 @@ function MyApp({ Component, pageProps }) {
           }}
         >
           <GlobalStyle />
-          <Component {...pageProps} />
-          <NavBar themeToggler={themeToggler}></NavBar>
+          <Component {...pageProps} toggleButton={toggleButton} />
+          <NavBar
+            themeToggler={themeToggler}
+            toggleButton={toggleButton}
+          ></NavBar>
         </SWRConfig>
       </ThemeProvider>
     </>

@@ -3,9 +3,9 @@ export { StyledCalculatorButton };
 
 const StyledCalculatorButton = styled.button`
   background: var(--purple-gradient-rl);
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: ${({ theme }) => theme.border};
-  padding: 5px 20px 5px 20px;
+  padding: 7px 20px 7px 20px;
   margin: 30px 0 0px 30px;
   align-self: center;
   transition: 0.6s;
