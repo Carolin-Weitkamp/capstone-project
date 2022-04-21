@@ -5,6 +5,7 @@ export const lightTheme = {
   flatcolor: 'rgba(0, 255, 0, 0.5)',
   navbar: 'white',
   textalternativ: 'hotpink',
+  flatcolorfull: '#9CF29C',
 };
 export const darkTheme = {
   body: 'black',
@@ -13,4 +14,5 @@ export const darkTheme = {
   flatcolor: 'rgba(158, 70, 250, 0.8)',
   navbar: 'black',
   textalternativ: 'yellow',
+  flatcolorfull: '#9E46FA',
 };
