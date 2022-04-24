@@ -18,8 +18,8 @@ body {
     font-family: 'Roboto', sans-serif;
     --purple-gradient-rl:${({ theme }) => theme.flatcolor}; 
     --navbar:${({ theme }) => theme.navbar};
-
-
+    --textalternativ: ${({ theme }) => theme.textalternativ};
+    --flatcolorfull: ${({ theme }) => theme.flatcolorfull};
 
 }
 

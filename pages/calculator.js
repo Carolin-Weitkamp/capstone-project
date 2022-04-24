@@ -120,7 +120,7 @@ export default function Home({}) {
                 <div>
                   <p>Diese Webseite wird nicht grün gehostet.</p>
                   <Link href="/green-hosts" passHref>
-                    <StyledCheckButton>zu grün wechseln</StyledCheckButton>
+                    <StyledCheckButton>Zu grün wechseln!</StyledCheckButton>
                   </Link>
                 </div>
               )}

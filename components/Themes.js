@@ -4,6 +4,8 @@ export const lightTheme = {
   border: '2.5px solid hotpink',
   flatcolor: 'rgba(0, 255, 0, 0.5)',
   navbar: 'white',
+  textalternativ: 'hotpink',
+  flatcolorfull: '#9CF29C',
 };
 export const darkTheme = {
   body: 'black',
@@ -11,4 +13,6 @@ export const darkTheme = {
   border: '2.5px solid yellow',
   flatcolor: 'rgba(158, 70, 250, 0.8)',
   navbar: 'black',
+  textalternativ: 'yellow',
+  flatcolorfull: '#9E46FA',
 };

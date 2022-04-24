@@ -24,7 +24,7 @@ function InputFieldCountry({
 export default InputFieldCountry;
 
 const StyledSelect = styled.select`
-  background: var(--purple-gradient-rl);
+  background: var(--flatcolorfull);
   width: 185px;
   height: 35px;
   margin: 30px 0px 5px 30px;
@@ -33,10 +33,10 @@ const StyledSelect = styled.select`
   border: ${({ theme }) => theme.border};
   align-items: center;
   transition: 0.6s;
-  color: yellow;
+  color: var(--textalternativ);
   cursor: pointer;
   &:hover {
-    color: yellow;
+    color: var(--textalternativ);
   }
   @media screen and (min-width: 700px) {
     width: 400px;
