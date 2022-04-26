@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar/NavBar';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../components/Themes';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light');
@@ -13,6 +14,13 @@ function MyApp({ Component, pageProps }) {
     theme === 'light' ? setTheme('dark') : setTheme('light');
     setToggleButton(!toggleButton);
   };
+
+  useEffect(() => {
+    const isDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    isDarkMode ? setTheme('dark') : setTheme('light');
+  }, []);
 
   return (
     <>

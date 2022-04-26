@@ -27,9 +27,9 @@ export default function Landingpage({ toggleButton }) {
       <Landing4>
         <PictureStyle>
           {toggleButton === false ? (
-            <Image src={footprintgreen} alt={'lila Fuß'} />
+            <Image src={footprintpurple} alt={'lila Fuß'} />
           ) : (
-            <Image src={footprintpurple} alt={'grüner Fuß'} />
+            <Image src={footprintgreen} alt={'grüner Fuß'} />
           )}
         </PictureStyle>
       </Landing4>
