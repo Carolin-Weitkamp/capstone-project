@@ -3,6 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import darklight from '/public/pictures/darklight.svg';
 import darklightwhite from '/public/pictures/darklightwhite.svg';
+import menue_black from '/public/pictures/menue_black.svg';
+import menue_white from '/public/pictures/menue_white.svg';
+import Collapsible from 'react-collapsible';
 
 export { NavBar };
 
@@ -25,18 +28,43 @@ export default function NavBar({ themeToggler, toggleButton }) {
           <Image src={darklight} alt={'schwarz weißer Button'} />
         )}
       </DayLightButton>
+      {/* <Collapsible
+        trigger={
+          toggleButton === false ? (
+            <Image src={menue_white} alt={'weißer Menuebutton'} />
+          ) : (
+            <Image src={menue_black} alt={'schwarzer Menuebutton'} />
+          )
+        }
+      ></Collapsible> */}
+      {/* <MenueButton>
+        {toggleButton === false ? (
+          <Image src={menue_white} alt={'weißer Menuebutton'} />
+        ) : (
+          <Image src={menue_black} alt={'schwarzer Menuebutton'} />
+        )}
+      </MenueButton> */}
     </NavBarStyle>
   );
 }
+
+const MenueButton = styled.button`
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 45px;
+  /* margin-left: 43px; */
+  margin-right: 7px;
+`;
 
 const DayLightButton = styled.button`
   background: none;
   border: none;
   display: flex;
   justify-content: flex-end;
-  /* position: right; */
   width: 45px;
-  margin-left: 43px;
+  /* margin-left: px; */
   margin-right: 7px;
 `;
 
