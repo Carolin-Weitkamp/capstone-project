@@ -20,9 +20,9 @@ export default function NavBar({ themeToggler, toggleButton }) {
       </Link>
       <DayLightButton onClick={themeToggler}>
         {toggleButton === false ? (
-          <Image src={darklight} alt={'schwarz weißer Button'} />
-        ) : (
           <Image src={darklightwhite} alt={'schwarz weißer Button'} />
+        ) : (
+          <Image src={darklight} alt={'schwarz weißer Button'} />
         )}
       </DayLightButton>
     </NavBarStyle>
