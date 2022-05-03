@@ -34,9 +34,7 @@ const DayLightButton = styled.button`
   border: none;
   display: flex;
   justify-content: flex-end;
-  /* position: right; */
   width: 45px;
-  margin-left: 43px;
   margin-right: 7px;
 `;
 
