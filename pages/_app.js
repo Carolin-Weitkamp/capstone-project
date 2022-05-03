@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../components/Themes';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Example } from '../components/Menu/example';
+import { Example } from '../components/Menu/Example';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light');
