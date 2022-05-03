@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../components/Themes';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Example } from '../components/Menu/example';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light');
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps }) {
             themeToggler={themeToggler}
             toggleButton={toggleButton}
           ></NavBar>
+          {/* <Example /> */}
         </SWRConfig>
       </ThemeProvider>
     </>
