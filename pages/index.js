@@ -5,7 +5,6 @@ import footprintgreen from '/public/pictures/footprintgreen.svg';
 import footprintpurple from '/public/pictures/footprintpurple.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
-import { Example } from '../components/Menu/example';
 
 export default function Landingpage({ toggleButton }) {
   return (
@@ -38,7 +37,6 @@ export default function Landingpage({ toggleButton }) {
       <Landing7 />
       <Landing8 />
       <Landing9 />
-      <Example />
     </Landing>
   );
 }
