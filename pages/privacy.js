@@ -1,9 +1,7 @@
-import styled from 'styled-components';
-
-export default function privacy() {
+export default function Privacy() {
   return (
-    <Hosts>
-      <p>Datenschutz</p>
+    <div>
+      <h1>Datenschutz</h1>
       <p>
         Allgemeines Beim Aufrufen dieser Website werden durch den auf Ihrem
         Endgerät verwendeten Browser automatisch Informationen an den Server
@@ -24,14 +22,6 @@ export default function privacy() {
         gesetzlich zulässig ist. Rechtsgrundlage für die Datenverarbeitung ist
         Art. 6 Abs. 1 S. 1 lit. f DSGVO.
       </p>
-    </Hosts>
+    </div>
   );
 }
-
-const Hosts = styled.div`
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: repeat(6, [col-start] 1fr);
-  grid-template-rows: repeat(14, [col-start]);
-`;
