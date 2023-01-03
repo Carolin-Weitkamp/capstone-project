@@ -1,7 +1,7 @@
 export const lightTheme = {
   body: 'white',
   text: 'black',
-  border: '2.5px solid hotpink',
+  border: '2px solid hotpink',
   flatcolor: 'rgba(0, 255, 0, 0.5)',
   navbar: 'white',
   textalternativ: 'hotpink',
