@@ -16,7 +16,7 @@ export default function NavBar({ themeToggler, toggleButton }) {
         <p>Rechner</p>
       </Link>
       <Link href="/green-hosts" passHref>
-        <p>Grünes Hosting</p>
+        <p>Hosting</p>
       </Link>
       <DayLightButton onClick={themeToggler}>
         {toggleButton === false ? (
@@ -36,6 +36,7 @@ const DayLightButton = styled.button`
   justify-content: flex-end;
   width: 45px;
   margin-right: 7px;
+  margin-left: 90px;
 `;
 
 const NavBarStyle = styled.div`
