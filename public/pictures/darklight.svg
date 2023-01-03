@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 192 185.22" style="enable-background:new 0 0 192 185.22;" xml:space="preserve">
-<path d="M96.12,32.69c-34.25,0-62.02,27.77-62.02,62.02s27.77,62.02,62.02,62.02s62.02-27.77,62.02-62.02S130.38,32.69,96.12,32.69z
-	 M96.12,149.91c-30.48,0-55.19-24.71-55.19-55.19s24.71-55.19,55.19-55.19s55.19,24.71,55.19,55.19S126.6,149.91,96.12,149.91z"/>
-<path d="M96.12,44.52c-0.61,0-1.21,0.02-1.82,0.05v100.31c0.6,0.02,1.21,0.05,1.82,0.05c27.72,0,50.2-22.48,50.2-50.2
-	C146.32,66.99,123.85,44.52,96.12,44.52z"/>
+	 viewBox="0 0 126 127.9" style="enable-background:new 0 0 126 127.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0500FF;}
+</style>
+<path class="st0" d="M63.1,1.7c-34.2,0-62,27.8-62,62s27.8,62,62,62s62-27.8,62-62S97.4,1.7,63.1,1.7z M63.1,118.9
+	c-30.5,0-55.2-24.7-55.2-55.2S32.6,8.5,63.1,8.5s55.2,24.7,55.2,55.2S93.6,118.9,63.1,118.9z"/>
+<path class="st0" d="M63.1,13.5c-0.6,0-1.2,0-1.8,0v100.3c0.6,0,1.2,0.1,1.8,0.1c27.7,0,50.2-22.5,50.2-50.2
+	C113.3,36,90.8,13.5,63.1,13.5z"/>
 </svg>
