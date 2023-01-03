@@ -1,18 +1,18 @@
 export const lightTheme = {
   body: 'white',
-  text: 'black',
-  border: '2px solid hotpink',
+  text: 'rgba(5, 0, 255, 1)',
+  border: '2px solid rgba(5, 0, 255, 1)',
   flatcolor: 'rgba(0, 255, 0, 0.5)',
   navbar: 'white',
   textalternativ: 'hotpink',
   flatcolorfull: '#9CF29C',
 };
 export const darkTheme = {
-  body: 'black',
+  body: 'rgba(1, 1, 33, 1)',
   text: 'white',
-  border: '2.5px solid yellow',
+  border: '2px solid white',
   flatcolor: 'rgba(158, 70, 250, 0.8)',
-  navbar: 'black',
-  textalternativ: 'yellow',
+  navbar: 'rgba(1, 1, 33, 1)',
+  textalternativ: 'white',
   flatcolorfull: '#9E46FA',
 };
