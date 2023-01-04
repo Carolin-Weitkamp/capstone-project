@@ -86,7 +86,7 @@ const Result33 = styled.div`
   grid-row: 6;
   border-left: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
-  background-color: var(--purple-gradient-rl);
+  background: var(--purple-gradient-rl);
   transition: 2s;
   :hover {
     background-color: var(--textalternativ);
@@ -101,6 +101,7 @@ const Result4 = styled.div`
   grid-row: 7;
   border-left: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
   > div {
     padding: 10px 30px 10px 30px;
     font-size: 1rem;
@@ -131,7 +132,8 @@ const Result6 = styled.div`
   grid-row: 5 / 8;
   border-right: ${({ theme }) => theme.border};
   border-left: ${({ theme }) => theme.border};
-  background-color: var(--purple-gradient-rl);
+  border-bottom: ${({ theme }) => theme.border};
+  background: var(--purple-gradient-rl);
   transition: 2s;
   :hover {
     background-color: var(--textalternativ);
@@ -144,7 +146,7 @@ const Result6 = styled.div`
 const Result7 = styled.div`
   grid-column: col-start 2 / span 4;
   grid-row: 8 / 14;
-  border-top: ${({ theme }) => theme.border};
+
   border-left: ${({ theme }) => theme.border};
   border-bottom: ${({ theme }) => theme.border};
   > div {
@@ -165,8 +167,8 @@ const Result77 = styled.div`
   grid-row: 8 / 14;
   border-left: ${({ theme }) => theme.border};
   border-bottom: ${({ theme }) => theme.border};
-  border-top: ${({ theme }) => theme.border};
-  background-color: var(--purple-gradient-rl);
+
+  background: var(--purple-gradient-rl);
   transition: 2s;
   :hover {
     background-color: var(--textalternativ);
@@ -178,6 +180,8 @@ const Result8 = styled.div`
   grid-row: 7 / 11;
   border-left: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
+  border-bottom: ${({ theme }) => theme.border};
+
   @media screen and (min-width: 700px) {
     border-left: none;
     border-top: none;
@@ -190,7 +194,7 @@ const Result9 = styled.div`
   grid-row: 8 / 11;
   border-left: ${({ theme }) => theme.border};
   border-right: ${({ theme }) => theme.border};
-  border-bottom: ${({ theme }) => theme.border};
+
   background: var(--purple-gradient-rl);
   transition: 2s;
   :hover {
