@@ -24,7 +24,7 @@ function InputFieldCountry({
 export default InputFieldCountry;
 
 const StyledSelect = styled.select`
-  background: var(--flatcolorfull);
+  background: var(--purple-gradient-rl);
   width: 185px;
   height: 40px;
   margin: 30px 0px 5px 30px;

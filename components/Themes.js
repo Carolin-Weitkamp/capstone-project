@@ -6,7 +6,7 @@ export const lightTheme = {
     'linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(185,231,200,0) 0%, rgba(173,255,0,1) 100%)',
   navbar:
     'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(173,255,0,1) 100%)',
-  textalternativ: 'rgba(5, 0, 255, 1)',
+  textalternativ: 'hotpink',
   flatcolorfull: '#9E46FA',
 };
 export const darkTheme = {

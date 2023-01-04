@@ -12,8 +12,11 @@ const StyledCheckButton = styled.button`
   cursor: pointer;
   color: var(--textalternativ);
   &:hover {
-    background-color: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.flatcolor};
+    background-color: hotpink;
+    color: hotpink;
+
+    /* background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.flatcolor}; */
   }
   @media screen and (min-width: 700px) {
     margin: 10px 10px 10px 0;
