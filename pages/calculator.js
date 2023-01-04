@@ -113,8 +113,8 @@ export default function Home({}) {
           {data ? (
             <div>
               {data.green === true ? (
-                <p style={{ color: 'rgba(0, 255, 0, 0.5)' }}>
-                  Diese Webseite wird grün gehostet.
+                <p style={{ color: 'rgba(173, 255, 0, 1)' }}>
+                  Diese Webseite wird bereits grün gehostet.
                 </p>
               ) : (
                 <div>
@@ -137,8 +137,9 @@ export default function Home({}) {
                 </p>
               ) : (
                 <p>
-                  Sie ist dreckiger als {(1 - data.cleanerThan) * 100}% der
-                  bereits berechneten Websites.
+                  Sie ist dreckiger als{' '}
+                  {(1 - data.cleanerThan).toFixed(2) * 100}% der bereits
+                  berechneten Websites.
                 </p>
               )}
             </div>
@@ -159,8 +160,9 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                Es werden ca. {data.statistics.co2.grid.litres.toFixed(2)} Liter
-                Wasser verbraucht.
+                Und es werden ungefähr{' '}
+                {data.statistics.co2.grid.litres.toFixed(2)} Liter Wasser
+                verbraucht.
               </p>
             </div>
           ) : null}
@@ -171,9 +173,9 @@ export default function Home({}) {
           {data ? (
             <div>
               <p>
-                Insgesamt werden in etwa{' '}
+                Insgesamt werden somit{' '}
                 {data.statistics.co2.grid.grams.toFixed(2)} Gramm CO2 bei jedem
-                Ladevorgang verbrannt.
+                Ladevorgang der Website emittiert.
               </p>
             </div>
           ) : null}

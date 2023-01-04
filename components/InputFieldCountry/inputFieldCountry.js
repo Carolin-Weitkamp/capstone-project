@@ -26,10 +26,10 @@ export default InputFieldCountry;
 const StyledSelect = styled.select`
   background: var(--flatcolorfull);
   width: 185px;
-  height: 35px;
+  height: 40px;
   margin: 30px 0px 5px 30px;
   padding: 0px 20px 0px 6px; // in dem Input Feld
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   border: ${({ theme }) => theme.border};
   align-items: center;
   transition: 0.6s;
