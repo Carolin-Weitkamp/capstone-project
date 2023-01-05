@@ -32,11 +32,16 @@ export default function NavBar({ themeToggler, toggleButton }) {
 const DayLightButton = styled.button`
   background: none;
   border: none;
+  position: fixed;
   display: flex;
   justify-content: flex-end;
   width: 35px;
-  margin-right: 7px;
-  margin-left: 90px;
+  right: 0;
+  margin-right: 15px;
+  @media screen and (min-width: 700px) {
+    width: 45px;
+    margin-right: 60px;
+  }
 `;
 
 const NavBarStyle = styled.div`
@@ -47,7 +52,7 @@ const NavBarStyle = styled.div`
   z-index: 1;
   border: ${({ theme }) => theme.border};
   box-shadow: pink;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   bottom: 0px;
   right: 0;
@@ -62,21 +67,22 @@ const NavBarStyle = styled.div`
     padding-left: 30px;
     font-size: 0.9rem;
     transition: 0, 2s;
+    margin-right: 10px;
   }
   @media screen and (min-width: 700px) {
-    height: 60px;
+    height: 70px;
     top: 0px;
     > p {
-      padding-left: 50px;
+      padding-left: 60px;
       font-size: 30px;
     }
   }
   @media screen and (min-width: 1500px) {
-    height: 100px;
+    height: 70px;
     top: 0px;
     > p {
-      padding-left: 50px;
-      font-size: 40px;
+      padding-left: 60px;
+      font-size: 30px;
     }
   }
 `;

@@ -1,11 +1,12 @@
 import { SWRConfig } from 'swr';
 import { GlobalStyle } from '../components/GlobalStyle';
 import NavBar from '../components/NavBar/NavBar';
+import LegalBar from '../components/Legalbar/LegalBar';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../components/Themes';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Example } from '../components/Menu/Example';
+// import { Example } from '../components/Menu/Example';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light');
@@ -38,6 +39,7 @@ function MyApp({ Component, pageProps }) {
             themeToggler={themeToggler}
             toggleButton={toggleButton}
           ></NavBar>
+          <LegalBar></LegalBar>
           {/* <Example /> */}
         </SWRConfig>
       </ThemeProvider>

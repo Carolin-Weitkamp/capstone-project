@@ -9,6 +9,10 @@ import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButt
 export default function Landingpage({ toggleButton }) {
   return (
     <Landing>
+      {/* <hr></hr> */}
+      <LandingLogo>
+        <p>TEST</p>
+      </LandingLogo>
       <Landing1>
         <p>Wie groß ist der CO2-Fußabdruck deiner Website?</p>
       </Landing1>
@@ -46,21 +50,39 @@ const Landing = styled.div`
   width: 100%;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(14, [col-start]);
+
+  /* > hr {
+    color: hotpink;
+    opacity: 0.5;
+    height: 100%;
+    width: 0;
+    margin-left: 30px;
+    position: fixed;
+  } */
+`;
+
+const LandingLogo = styled.div`
+  grid-column: col-start / span 6;
+  grid-row: 1;
+  border-left: ${({ theme }) => theme.border};
+  border-top: ${({ theme }) => theme.border};
+  border-right: ${({ theme }) => theme.border};
 `;
 
 const Landing1 = styled.div`
   grid-column: col-start / span 6;
-  grid-row: 1 / 5;
+  grid-row: 2 / 5;
   border-left: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
   border-right: ${({ theme }) => theme.border};
 
   > p {
     letter-spacing: 0.03rem;
-    padding: 30px 30px 30px 30px;
+    padding: 10px 30px 30px 30px;
     font-size: 1.7rem;
     transition: 1s;
   }
+
   @media screen and (min-width: 700px) {
     > p {
       font-size: 3.2rem;
@@ -139,7 +161,7 @@ const Landing7 = styled.div`
 
 const Landing8 = styled.div`
   grid-column: col-start 6 / span 1;
-  grid-row: 5 / 8;
+  grid-row: 5 / 14;
   border-right: ${({ theme }) => theme.border};
   border-left: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
@@ -148,7 +170,7 @@ const Landing8 = styled.div`
 
 const Landing9 = styled.div`
   grid-column: col-start 6 / span 1;
-  grid-row: 8 / 14;
+  /* grid-row: 8 / 14; */
   border-left: ${({ theme }) => theme.border};
   border-right: ${({ theme }) => theme.border};
   border-bottom: ${({ theme }) => theme.border};
