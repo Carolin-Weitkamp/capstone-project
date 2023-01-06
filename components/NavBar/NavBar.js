@@ -35,7 +35,7 @@ const DayLightButton = styled.button`
   position: fixed;
   display: flex;
   justify-content: flex-end;
-  width: 40px;
+  width: 45px;
   right: 0;
   margin-right: 15px;
   @media screen and (min-width: 700px) {
@@ -65,7 +65,7 @@ const NavBarStyle = styled.div`
     font-weight: medium;
     display: flex;
     padding-left: 30px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: 0, 2s;
     margin-right: 10px;
   }
