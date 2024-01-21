@@ -35,7 +35,7 @@ const DayLightButton = styled.button`
   position: fixed;
   display: flex;
   justify-content: flex-end;
-  width: 45px;
+  width: 32px;
   right: 0;
   margin-right: 15px;
   @media screen and (min-width: 700px) {

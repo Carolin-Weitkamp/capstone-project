@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import footprintgreen from '/public/pictures/footprintgreen.svg';
 import footprintpurple from '/public/pictures/footprintpurple.svg';
+import logolight from '/public/pictures/logolight.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
 
@@ -11,7 +12,14 @@ export default function Landingpage({ toggleButton }) {
     <Landing>
       {/* <hr></hr> */}
       <LandingLogo>
-        <p>TEST</p>
+        <LogoStyle>
+          {toggleButton === false ? (
+            <Image src={logolight} alt={'lila Fuß'} />
+          ) : (
+            <Image src={logolight} alt={'logo'} />
+          )}
+        </LogoStyle>
+        {/* <p>LOGO</p> */}
       </LandingLogo>
       <Landing1>
         <p>Wie groß ist der CO2-Fußabdruck deiner Website?</p>
@@ -29,13 +37,13 @@ export default function Landingpage({ toggleButton }) {
         <p>Eine Liste grüner Hosting-Anbieter sortiert nach Ländern.</p>
       </Landing3>
       <Landing4>
-        <PictureStyle>
+        {/* <PictureStyle>
           {toggleButton === false ? (
             <Image src={footprintpurple} alt={'lila Fuß'} />
           ) : (
-            <Image src={footprintgreen} alt={'grüner Fuß'} />
+            <Image src={footprintgreen} alt={'gruner Fuß'} />
           )}
-        </PictureStyle>
+        </PictureStyle> */}
       </Landing4>
       <Landing6 />
       <Landing7 />
@@ -67,6 +75,10 @@ const LandingLogo = styled.div`
   border-left: ${({ theme }) => theme.border};
   border-top: ${({ theme }) => theme.border};
   border-right: ${({ theme }) => theme.border};
+  > p {
+    padding: 10px 30px 10px 30px;
+    transition: 1s;
+  }
 `;
 
 const Landing1 = styled.div`
@@ -180,4 +192,10 @@ const Landing9 = styled.div`
 const PictureStyle = styled.div`
   height: 40vh;
   padding: 30px 30px 0px 0px;
+`;
+
+const LogoStyle = styled.div`
+  height: 5rem;
+  width: 14rem;
+  padding: 20px 50px 20px 20px;
 `;

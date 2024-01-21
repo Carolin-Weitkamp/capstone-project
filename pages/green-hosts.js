@@ -46,7 +46,7 @@ export default function GreenHosts() {
       </Hosts2>
       <Hosts8 />
       <Hosts7>
-        <p>Diese Auflistung erhebt keinen Anspruch auf Vollständigkeit.</p>
+        <p></p>
       </Hosts7>
     </Hosts>
   );
