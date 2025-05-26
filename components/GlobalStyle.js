@@ -21,7 +21,7 @@ body {
     --textalternativ: ${({ theme }) => theme.textalternativ};
     --flatcolorfull: ${({ theme }) => theme.flatcolorfull};
     --border: ${({ theme }) => theme.border};
-
+ 
 }
 
 

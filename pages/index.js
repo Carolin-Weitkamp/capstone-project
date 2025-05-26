@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
-import footprintgreen from '/public/pictures/footprintgreen.svg';
-import footprintpurple from '/public/pictures/footprintpurple.svg';
+// import footprintgreen from '/public/pictures/footprintgreen.svg';
+// import footprintpurple from '/public/pictures/footprintpurple.svg';
 import logolight from '/public/pictures/logolight.svg';
+import logodark from '/public/pictures/logodark.svg';
 import { StyledCalculatorButton } from '../components/CheckButton/CalculatorButton';
 import { StyledGreenHostsButton } from '../components/CheckButton/GreenHostsButton';
 
@@ -14,7 +15,7 @@ export default function Landingpage({ toggleButton }) {
       <LandingLogo>
         <LogoStyle>
           {toggleButton === false ? (
-            <Image src={logolight} alt={'lila Fuß'} />
+            <Image src={logodark} alt={'logo'} />
           ) : (
             <Image src={logolight} alt={'logo'} />
           )}
@@ -196,6 +197,6 @@ const PictureStyle = styled.div`
 
 const LogoStyle = styled.div`
   height: 5rem;
-  width: 14rem;
+  width: 13rem;
   padding: 20px 50px 20px 20px;
 `;
